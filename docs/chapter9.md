@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: "Chapter 9"
-nav_order: 9
+permalink: /docs/chapter9/
 ---
 
 # Putting It All Together: Completing the Final Project

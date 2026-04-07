@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: "Chapter 6"
-nav_order: 6
+permalink: /docs/chapter6/
 ---
 
 # Independent *t-Tests*

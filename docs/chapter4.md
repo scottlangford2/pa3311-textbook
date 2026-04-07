@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: "Chapter 4"
-nav_order: 4
+permalink: /docs/chapter4/
 ---
 
 # Probability and Uncertainty

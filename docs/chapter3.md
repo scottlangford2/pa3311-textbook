@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: "Chapter 3"
-nav_order: 3
+permalink: /docs/chapter3/
 ---
 
 # Describing Data

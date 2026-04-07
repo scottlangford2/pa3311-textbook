@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: "Chapter 8"
-nav_order: 8
+permalink: /docs/chapter8/
 ---
 
 # Regression Analysis

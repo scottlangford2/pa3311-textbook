@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: "Chapter 1"
-nav_order: 1
+permalink: /docs/chapter1/
 ---
 
 # Introduction to Analytical Foundations

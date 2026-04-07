@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: "Chapter 5"
-nav_order: 5
+permalink: /docs/chapter5/
 ---
 
 # Statistical Inference

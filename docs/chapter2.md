@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: "Chapter 2"
-nav_order: 2
+permalink: /docs/chapter2/
 ---
 
 # Developing Research Questions
