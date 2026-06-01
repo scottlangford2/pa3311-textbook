@@ -9,13 +9,17 @@ Sources (all free, no API key):
 Run from Datasets/:  python3 build_dataset.py
 Requires: pandas, requests, openpyxl. Downloads source files to _raw/ on first run.
 """
-import io, os, zipfile, requests, pandas as pd
+import io, os, re, zipfile, requests, pandas as pd
 
 UA = {"User-Agent": "Mozilla/5.0"}
 RAW = "_raw"
 COG_ZIP, COG_URL = f"{RAW}/cog2022.zip", "https://www2.census.gov/programs-surveys/gov-finances/tables/2022/2022_Individual_Unit_File.zip"
 CBSA_XLSX, CBSA_URL = f"{RAW}/cbsa_list1_2023.xlsx", "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2023/delineation-files/list1_2023.xlsx"
-norm = lambda s: str(s).upper().strip().replace(".", "").replace("  ", " ")
+
+def matchkey(s):
+    """Robust city-name join key: drop county qualifiers, SAINT->ST, strip non-alphanumerics."""
+    s = re.sub(r"\([^)]*\)", "", str(s).upper()).replace("SAINT", "ST")
+    return re.sub(r"[^A-Z0-9]", "", s)
 
 def fetch(path, url):
     os.makedirs(RAW, exist_ok=True)
@@ -118,7 +122,7 @@ for gid in pid["gid"]:
 fin = pd.DataFrame(fin, columns=["gid", "property_tax", "gen_sales_tax", "total_taxes", "lt_debt_os", "st_debt_os", "total_debt_os"])
 df = pid.merge(fin, on="gid")
 df = df[df["population"] > 0].copy()
-df["key"] = df["city"].map(norm)
+df["key"] = df["city"].map(matchkey)
 
 # ---- Comptroller ----
 alloc = []
@@ -126,13 +130,13 @@ for yr in (2019, 2023):
     a = soql("vfba-b57j", {"$select": "city,sum(net_payment_this_period) as v", "$where": f"report_year={yr}", "$group": "city", "$limit": 5000})
     alloc.append(a.rename(columns={"v": f"sales_tax_alloc_{yr}"}))
 alloc = alloc[0].merge(alloc[1], on="city", how="outer")
-alloc["key"] = alloc["city"].map(norm)
+alloc["key"] = alloc["city"].map(matchkey)
 alloc = alloc.drop(columns=["city"]).groupby("key", as_index=False).sum(numeric_only=True)
 rate = soql("53pa-m7sm", {"$select": "city,current_rate", "$where": "report_year=2024", "$group": "city,current_rate", "$limit": 6000})
-rate["key"] = rate["city"].map(norm)
+rate["key"] = rate["city"].map(matchkey)
 rate = rate.drop_duplicates("key")[["key", "current_rate"]].rename(columns={"current_rate": "sales_tax_rate"})
 ts = soql("7z4d-yf2c", {"$select": "name,sum(taxable) as taxable_sales,sum(outlets) as business_outlets", "$where": "type='City' AND year=2022", "$group": "name", "$limit": 6000})
-ts["key"] = ts["name"].map(norm)
+ts["key"] = ts["name"].map(matchkey)
 ts = ts.drop(columns=["name"]).groupby("key", as_index=False).sum(numeric_only=True)
 
 m = df.merge(alloc, on="key", how="left").merge(rate, on="key", how="left").merge(ts, on="key", how="left")
@@ -142,6 +146,12 @@ m["taxable_sales_per_capita"] = m["taxable_sales"] / m["population"]
 denom = m["sales_tax_alloc_2019"].where(m["sales_tax_alloc_2019"] > 0)  # avoid divide-by-zero -> NaN
 m["salestax_growth_19_23_pct"] = (m["sales_tax_alloc_2023"] - denom) / denom * 100
 
+for c in ["property_tax","gen_sales_tax","total_taxes","tax_per_capita","lt_debt_os","st_debt_os",
+          "total_debt_os","debt_per_capita","taxable_sales","taxable_sales_per_capita",
+          "sales_tax_alloc_2019","sales_tax_alloc_2023"]:
+    m[c] = m[c].round(0)
+m["sales_tax_rate"] = m["sales_tax_rate"].round(2)
+m["salestax_growth_19_23_pct"] = m["salestax_growth_19_23_pct"].round(1)
 cols = [v[0] for v in VARDEFS]
 m = m[cols].sort_values("population", ascending=False).reset_index(drop=True)
 m.to_csv("TX_City_Finance_2022.csv", index=False)

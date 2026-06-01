@@ -19,5 +19,8 @@ pip install pandas requests openpyxl
 cd scripts
 python3 build_panel.py     # builds the panel
 python3 build_dataset.py   # builds the 2022 cross-section (with debt)
+python3 validate.py        # 19 integrity checks on both outputs (exit 0 = all pass)
 ```
+
+Data provenance and licensing: see [`../data/DATA_SOURCES.md`](../data/DATA_SOURCES.md).
 Each script downloads the Census file to `scripts/_raw/` on first run and writes its CSV/XLSX to the current directory. The canonical copies committed to the repo live in [`../data/`](../data); local rebuild outputs are git-ignored.

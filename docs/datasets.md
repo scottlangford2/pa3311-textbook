@@ -28,6 +28,7 @@ One row per city (1,202 cities) for a single year, adding **debt** and property/
 
 - 📘 [**Codebook**]({{ '/data/CODEBOOK.md' | relative_url }}) — every variable defined, with sources, caveats, summary statistics, and a module-by-module usage map
 - 🖼️ [Data at a Glance (one-page PDF)]({{ '/data/Data_At_A_Glance.pdf' | relative_url }})
+- 🔗 [Data sources & licensing]({{ '/data/DATA_SOURCES.md' | relative_url }})
 
 ## How each module uses this one file
 

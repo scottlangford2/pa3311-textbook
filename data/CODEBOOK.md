@@ -27,6 +27,8 @@ Two related files. **Use the panel as the primary course dataset.**
 | `year` | Calendar year | 2013–2024 | |
 | `sales_tax_alloc` | Sales-tax allocation payments | $/yr | 2013–2024 |
 | `sales_tax_alloc_per_capita` | alloc / 2022 ref population | $ | |
+| `sales_tax_alloc_real2024` | allocation in constant 2024 dollars | $/yr | CPI-U deflated |
+| `sales_tax_alloc_per_capita_real2024` | real (2024$) allocation per capita | $ | derived |
 | `taxable_sales` | Total taxable sales | $/yr | **2016+ only** (blank 2013–15) |
 | `taxable_sales_per_capita` | taxable_sales / 2022 ref population | $ | 2016+ |
 | `business_outlets` | Avg. active business outlets (quarterly mean) | count | 2016+ |
@@ -63,19 +65,21 @@ Cross-section, one row per city (N=1,202), 2022. Carries the same `city`/`county
 
 ## Summary statistics (auto-generated)
 
-*All dollar amounts in nominal dollars. Heavy right-skew (mean ≫ median) throughout — itself a teaching point.*
+*All dollar amounts in nominal dollars unless marked real. Heavy right-skew (mean ≫ median) throughout — itself a teaching point.*
 
 ### Panel — all 13,930 city-years (2013–2024)
 
 | Variable | N | Mean | Median | SD | Min | Max | Miss % |
 |---|--:|--:|--:|--:|--:|--:|--:|
-| `population_2022_ref` | 13,364 | 19,239 | 2,169 | 107,862 | 17.00 | 2,316,120 | 4.1 |
+| `population_2022_ref` | 13,556 | 19,034 | 2,156 | 107,119 | 17.00 | 2,316,120 | 2.7 |
 | `sales_tax_alloc` | 13,930 | 5,498,823 | 377,731 | 29,634,183 | 0.00 | 892,880,233 | 0.0 |
-| `sales_tax_alloc_per_capita` | 13,364 | 278 | 188 | 446 | 0.00 | 10,908 | 4.1 |
-| `taxable_sales` | 10,128 | 719,173,022 | 33,228,322 | 5,484,484,187 | 0.00 | 176,329,806,398 | 27.3 |
-| `taxable_sales_per_capita` | 9,809 | 26,490 | 15,850 | 51,411 | 0.00 | 1,333,056 | 29.6 |
-| `business_outlets` | 10,128 | 1,222 | 172 | 7,166 | 0.00 | 204,181 | 27.3 |
-| `sales_tax_rate` | 13,924 | 1.50 | 1.50 | 0.38 | 0.25 | 2.00 | 0.0 |
+| `sales_tax_alloc_per_capita` | 13,556 | 277 | 186 | 444 | 0.00 | 10,908 | 2.7 |
+| `sales_tax_alloc_real2024` | 13,930 | 6,525,292 | 453,392 | 34,867,811 | 0.00 | 919,215,192 | 0.0 |
+| `sales_tax_alloc_per_capita_real2024` | 13,556 | 327 | 226 | 514 | 0.00 | 12,306 | 2.7 |
+| `taxable_sales` | 10,185 | 715,260,722 | 33,057,331 | 5,469,363,149 | 0.00 | 176,329,806,398 | 26.9 |
+| `taxable_sales_per_capita` | 9,965 | 26,235 | 15,672 | 51,071 | 0.00 | 1,333,056 | 28.5 |
+| `business_outlets` | 10,185 | 1,215 | 172 | 7,146 | 0.00 | 204,181 | 26.9 |
+| `sales_tax_rate` | 13,930 | 1.50 | 1.50 | 0.38 | 0.25 | 2.00 | 0.0 |
 
 ### Cross-section — 1,202 cities (2022)
 
@@ -87,11 +91,11 @@ Cross-section, one row per city (N=1,202), 2022. Carries the same `city`/`county
 | `tax_per_capita` | 1,202 | 1,441 | 580 | 4,286 | 0.00 | 45,058 | 0.0 |
 | `total_debt_os` | 1,202 | 70,346,737 | 754,000 | 669,647,368 | 0.00 | 13,110,985,000 | 0.0 |
 | `debt_per_capita` | 1,202 | 1,285 | 514 | 2,244 | 0.00 | 45,153 | 0.0 |
-| `sales_tax_rate` | 1,125 | 1.53 | 1.50 | 0.38 | 0.25 | 2.00 | 6.4 |
-| `taxable_sales` | 1,099 | 860,002,706 | 42,977,578 | 6,290,683,347 | 0.00 | 166,330,315,878 | 8.6 |
-| `sales_tax_alloc_2019` | 1,124 | 5,493,674 | 391,343 | 28,897,143 | 0.00 | 698,992,968 | 6.5 |
-| `sales_tax_alloc_2023` | 1,124 | 7,540,139 | 563,457 | 37,997,466 | 0.00 | 892,880,233 | 6.5 |
-| `salestax_growth_19_23_pct` | 1,115 | 55.64 | 44.33 | 82.93 | -100 | 1,781 | 7.2 |
+| `sales_tax_rate` | 1,142 | 1.53 | 1.50 | 0.38 | 0.25 | 2.00 | 5.0 |
+| `taxable_sales` | 1,113 | 850,681,910 | 42,284,512 | 6,251,606,120 | 0.00 | 166,330,315,878 | 7.4 |
+| `sales_tax_alloc_2019` | 1,139 | 5,436,515 | 385,415 | 28,713,041 | 0.00 | 698,992,968 | 5.2 |
+| `sales_tax_alloc_2023` | 1,139 | 7,459,625 | 553,017 | 37,755,001 | 1,371 | 892,880,233 | 5.2 |
+| `salestax_growth_19_23_pct` | 1,130 | 55.92 | 44.45 | 82.45 | -72.60 | 1,781 | 6.0 |
 
 The same tables ship as a **Summary** worksheet inside each `.xlsx`, alongside a **Codebook** worksheet of these definitions.
 
