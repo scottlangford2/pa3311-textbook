@@ -21,7 +21,8 @@ Two related files. **Use the panel as the primary course dataset.**
 |---|---|---|---|
 | `city` | City name | — | |
 | `county` | County | — | time-invariant |
-| `metro_status` | Metro vs. Non-Metro | category | time-invariant; see note* |
+| `metro_status` | Metro (in a Metropolitan Statistical Area) vs. Non-Metro | category | time-invariant; OMB/Census CBSA 2023 |
+| `cbsa_type` | Metropolitan / Micropolitan / Neither | category | time-invariant; OMB/Census CBSA 2023 |
 | `population_2022_ref` | 2022 reference population | persons | **fixed across years** — denominator only |
 | `year` | Calendar year | 2013–2024 | |
 | `sales_tax_alloc` | Sales-tax allocation payments | $/yr | 2013–2024 |
@@ -31,7 +32,7 @@ Two related files. **Use the panel as the primary course dataset.**
 | `business_outlets` | Avg. active business outlets (quarterly mean) | count | 2016+ |
 | `sales_tax_rate` | Local sales-tax rate | percent | |
 
-\* `metro_status` flags cities whose county is a major TX metro county (documented list in `build_panel.py`); a teaching simplification, not the full OMB delineation.
+`metro_status` and `cbsa_type` use the official **OMB / Census CBSA delineation (2023)**: a city is *Metro* if its county belongs to a Metropolitan Statistical Area, *Non-Metro* otherwise (Micropolitan or neither). `cbsa_type` keeps the full three-way distinction.
 
 ### Panel notes / teaching points
 - **Mostly balanced:** 1,143 of 1,180 cities have all 12 years; the rest incorporated or began receiving allocations mid-period (unbalanced panel — a real teaching point).
@@ -55,8 +56,44 @@ Two related files. **Use the panel as the primary course dataset.**
 ---
 
 ## SUPPLEMENT: `TX_City_Finance_2022` (has debt)
-Cross-section, one row per city (N=1,202), 2022. Adds variables not available annually:
+Cross-section, one row per city (N=1,202), 2022. Carries the same `city`/`county`/`county_fips`/`place_fips`/`metro_status`/`cbsa_type`/`population` keys as the panel, and adds variables not available annually:
 `property_tax`, `gen_sales_tax`, `total_taxes`, `tax_per_capita`, `lt_debt_os`, `st_debt_os`, `total_debt_os`, `debt_per_capita` — from the **U.S. Census 2022 Census of Governments** individual unit file (amounts in dollars; debt = long-term `49U` + short-term `64V`). Use this if you want a **debt** outcome for the regression/OVB module. **No fund balance** exists in any free source (so the literal Chapter 8 fund-balance variable can't be reproduced). ~30% of small cities carry $0 debt (real; good for discussing zeros/skew).
 
 ---
-Built `2026-06-01`. Rebuild: `python3 build_panel.py` (primary) and `python3 build_dataset.py` (supplement). Both read `_raw/cog2022.zip`.
+
+## Summary statistics (auto-generated)
+
+*All dollar amounts in nominal dollars. Heavy right-skew (mean ≫ median) throughout — itself a teaching point.*
+
+### Panel — all 13,930 city-years (2013–2024)
+
+| Variable | N | Mean | Median | SD | Min | Max | Miss % |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| `population_2022_ref` | 13,364 | 19,239 | 2,169 | 107,862 | 17.00 | 2,316,120 | 4.1 |
+| `sales_tax_alloc` | 13,930 | 5,498,823 | 377,731 | 29,634,183 | 0.00 | 892,880,233 | 0.0 |
+| `sales_tax_alloc_per_capita` | 13,364 | 278 | 188 | 446 | 0.00 | 10,908 | 4.1 |
+| `taxable_sales` | 10,128 | 719,173,022 | 33,228,322 | 5,484,484,187 | 0.00 | 176,329,806,398 | 27.3 |
+| `taxable_sales_per_capita` | 9,809 | 26,490 | 15,850 | 51,411 | 0.00 | 1,333,056 | 29.6 |
+| `business_outlets` | 10,128 | 1,222 | 172 | 7,166 | 0.00 | 204,181 | 27.3 |
+| `sales_tax_rate` | 13,924 | 1.50 | 1.50 | 0.38 | 0.25 | 2.00 | 0.0 |
+
+### Cross-section — 1,202 cities (2022)
+
+| Variable | N | Mean | Median | SD | Min | Max | Miss % |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| `population` | 1,202 | 17,951 | 1,996 | 103,974 | 17.00 | 2,316,120 | 0.0 |
+| `property_tax` | 1,202 | 10,126,994 | 776,000 | 71,589,100 | 0.00 | 1,600,416,000 | 0.0 |
+| `total_taxes` | 1,202 | 18,629,405 | 1,559,000 | 121,032,274 | 0.00 | 2,865,310,000 | 0.0 |
+| `tax_per_capita` | 1,202 | 1,441 | 580 | 4,286 | 0.00 | 45,058 | 0.0 |
+| `total_debt_os` | 1,202 | 70,346,737 | 754,000 | 669,647,368 | 0.00 | 13,110,985,000 | 0.0 |
+| `debt_per_capita` | 1,202 | 1,285 | 514 | 2,244 | 0.00 | 45,153 | 0.0 |
+| `sales_tax_rate` | 1,125 | 1.53 | 1.50 | 0.38 | 0.25 | 2.00 | 6.4 |
+| `taxable_sales` | 1,099 | 860,002,706 | 42,977,578 | 6,290,683,347 | 0.00 | 166,330,315,878 | 8.6 |
+| `sales_tax_alloc_2019` | 1,124 | 5,493,674 | 391,343 | 28,897,143 | 0.00 | 698,992,968 | 6.5 |
+| `sales_tax_alloc_2023` | 1,124 | 7,540,139 | 563,457 | 37,997,466 | 0.00 | 892,880,233 | 6.5 |
+| `salestax_growth_19_23_pct` | 1,115 | 55.64 | 44.33 | 82.93 | -100 | 1,781 | 7.2 |
+
+The same tables ship as a **Summary** worksheet inside each `.xlsx`, alongside a **Codebook** worksheet of these definitions.
+
+---
+Built `2026-06-01`. Rebuild: `python3 build_panel.py` (primary) and `python3 build_dataset.py` (supplement). Each auto-downloads its source files (Census finance zip + OMB CBSA file) to `_raw/`.

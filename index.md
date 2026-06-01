@@ -24,11 +24,9 @@ This is the online companion to the PA 3311 textbook.
 
 ## Datasets
 
-Download these real Texas datasets and work through the chapter exercises in Excel.
+We use **one Texas dataset across the whole course** — the **[Texas City Sales Panel (2013–2024)](docs/datasets)**: 1,180 cities, 13,930 city-years of municipal finance data, with a debt cross-section supplement, full codebook, and a one-page overview.
 
-- **[Texas Voter Turnout (2020)](data/voter_turnout.csv)** — 252 counties, TX Secretary of State + MIT Election Lab
-- **[Austin-Travis County EMS (2018–2026)](data/ems_response.csv)** — 99 months, City of Austin Open Data Portal
-- **[Texas Daily Weather (2023)](data/tx_weather.csv)** — 1,095 daily observations, NOAA
+➡️ **[See all datasets and downloads](docs/datasets)**
 
 ## How to Use This Site
 
