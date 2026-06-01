@@ -2,3 +2,7 @@ _site/
 .jekyll-cache/
 .sass-cache/
 Gemfile.lock
+# dataset build caches / local outputs
+scripts/_raw/
+scripts/*.csv
+scripts/*.xlsx
