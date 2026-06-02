@@ -168,7 +168,7 @@ these pitfalls is central to analytical discipline.
 *Ignoring the data-generating process* leads analysts to treat numbers as objective facts when they are, in reality, products of specific reporting systems, definitions, and institutional practices. Reporting systems vary across jurisdictions; definitions of key terms change over time; and the agencies collecting data operate under their own incentive structures. An analyst who does not ask how the data were produced risks drawing conclusions that reflect administrative artifacts rather than real-world conditions.
 
 
-*Overinterpreting small samples* is especially dangerous when dealing with rare events. Opioid-related deaths in a small county, for example, may jump from two to six in a single year---a 200\
+*Overinterpreting small samples* is especially dangerous when dealing with rare events. Opioid-related deaths in a small county, for example, may jump from two to six in a single year---a 200%
 
 
 *Confusing precision with accuracy* occurs when analysts mistake fine-grained measurement for reliable measurement. More decimal places do not mean more truth; they mean only that the recording instrument is detailed, not that it is correct. 

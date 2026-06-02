@@ -7,6 +7,9 @@ permalink: /docs/chapter6/
 # Independent *t-Tests*
 
 
+> **Course dataset & lab.** Work this chapter's techniques on our spine dataset — [Texas City Sales Panel](../datasets). Compare **Metro vs. Non-Metro** cities' per-capita sales tax with an independent-samples t-test.
+
+
 ## Epigraphs
 
 
@@ -332,7 +335,7 @@ Interpretation requires examining effect size, uncertainty, and practical releva
     - Evaluate the reliability of a published group comparison using GAO criteria for
           data integrity (gaoDataQuality), and critique claims of certainty using
           Manski’s arguments (manski2019policy).
-    - Using the EMS response time dataset from Appendix B, separate incidents into rural and urban groups. In Excel, use the Data Analysis ToolPak to run an independent *t*-test (two-sample assuming unequal variances). Report the $t$-statistic, $p$-value, and compute Cohen’s $d$ by hand. Write a three-sentence interpretation: Is the difference statistically significant? Is it practically meaningful? What would you recommend to a county administrator?
+    - Using the EMS response time dataset from the [Course Datasets page](../datasets), separate incidents into rural and urban groups. In Excel, use the Data Analysis ToolPak to run an independent *t*-test (two-sample assuming unequal variances). Report the $t$-statistic, $p$-value, and compute Cohen’s $d$ by hand. Write a three-sentence interpretation: Is the difference statistically significant? Is it practically meaningful? What would you recommend to a county administrator?
 
 
 ## Transition to Chapter Seven

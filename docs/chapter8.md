@@ -7,6 +7,9 @@ permalink: /docs/chapter8/
 # Regression Analysis
 
 
+> **Course dataset & lab.** Work this chapter's techniques on our spine dataset — [Texas City Sales Panel](../datasets). Regress `sales_tax_alloc` on `taxable_sales`, then add a second predictor; see omitted-variable bias.
+
+
 ## Epigraphs
 
 
@@ -193,6 +196,8 @@ sources of confounding (angrist1996identification).
 > **Returning to the Case:** In the Texas city credit rating case, a simple regression of credit rating on debt-to-revenue ratio might show a strong negative coefficient. But cities with high debt often issued that debt to fund infrastructure that boosted economic growth and tax revenue---and they may also maintain substantial reserve funds precisely because they are fiscally sophisticated borrowers. Omitting fund balance ratio and revenue growth from the model would bias the debt coefficient, making high debt appear more harmful to creditworthiness than it actually is when accompanied by strong fiscal management.}
 
 ### Worked Example: Credit Ratings and Fiscal Variables
+
+> **On course data:** fund balance isn't available in free public data. To reproduce an omitted-variable-bias story on the course dataset, use the 2022 finance cross-section and regress `total_debt_os` on `total_taxes`, then add `population` — the tax coefficient drops sharply because taxes and population are highly correlated.
 
 Consider data on 10 Texas cities:
 
@@ -404,7 +409,7 @@ When regression models use data from complex survey designs---such as the ACS or
 
     - Compare models using adjusted $R^2$ and discuss uncertainty using Manski’s framework
           (manski2019policy).
-    - Download the voter turnout dataset from Appendix A. In Excel, use Data Analysis $>$ Regression to regress county-level turnout rate on population size. Record the coefficient, $R^2$, and $p$-value. Then add a second predictor (election type, coded as 1 = general, 0 = primary). Compare the two models: How does the population coefficient change? What does this tell you about OVB?
+    - Download the voter turnout dataset from the [Course Datasets page](../datasets). In Excel, use Data Analysis $>$ Regression to regress county-level turnout rate on population size. Record the coefficient, $R^2$, and $p$-value. Then add a second predictor (election type, coded as 1 = general, 0 = primary). Compare the two models: How does the population coefficient change? What does this tell you about OVB?
 
 
 ## Transition to Chapter Nine

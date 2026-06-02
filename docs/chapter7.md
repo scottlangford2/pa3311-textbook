@@ -7,6 +7,9 @@ permalink: /docs/chapter7/
 # Paired *t-Tests*
 
 
+> **Course dataset & lab.** Work this chapter's techniques on our spine dataset — [Texas City Sales Panel](../datasets). Compare each city's sales tax in **2019 vs. 2023** with a paired t-test (same cities, pre/post-COVID).
+
+
 ## Epigraphs
 
 
@@ -136,7 +139,7 @@ $$
 With $df = 7$, the critical value for a two-tailed test at $\alpha = 0.05$ is approximately $\pm 2.36$. Our $t = -2.35$ falls just short of the threshold ($p \approx 0.051$). The result is borderline---suggestive of a decline but not conclusive at conventional significance levels. In Excel, use `=T.TEST(before\_range, after\_range, 2, 1)` for a two-tailed paired test.
 
 **Interpretation.**
-The average tract-level count declined by about 5.4 individuals, but substantial variation across tracts (some increased, most decreased) means we cannot rule out chance at the 5\
+The average tract-level count declined by about 5.4 individuals, but substantial variation across tracts (some increased, most decreased) means we cannot rule out chance at the 5%
 
 
 *[Figure — see PDF version]*

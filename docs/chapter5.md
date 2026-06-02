@@ -7,6 +7,9 @@ permalink: /docs/chapter5/
 # Statistical Inference
 
 
+> **Course dataset & lab.** Work this chapter's techniques on our spine dataset — [Texas City Sales Panel](../datasets). Build a 95% confidence interval for the mean per-capita sales tax (one year).
+
+
 ## Epigraphs
 
 
@@ -41,7 +44,7 @@ This case captures the core challenge of statistical inference. The question is 
 **Guiding Questions**
 
 
-    - If a rural Texas district reports a 15\
+    - If a rural Texas district reports a 15%
     - When different districts define "vacancy" differently, what does that mean for the precision of statewide estimates?
     - How does the standard error of a vacancy rate change between a district with 40 positions and one with 4{,}000---and what are the policy implications?
 
@@ -152,20 +155,20 @@ A small standard error means the estimate is precise---repeated samples would pr
 The standard error is especially consequential in public-sector settings where sample sizes vary dramatically across units. Estimating average EMS response times in a low-volume rural district with only a few dozen calls per month yields a large SE, making it difficult to benchmark performance with confidence (dshsEMS). Comparing median incomes across census tracts requires attention to the SE published alongside each ACS estimate, because tracts with small populations carry wide margins of error (uscensusACS). Tracking departmental performance metrics over short time horizons---a common requirement under Office of Management and Budget (OMB) performance guidelines---also produces small samples and correspondingly large standard errors (ombPerfGuide). In Gelman and Hill’s multilevel framework, the SE reflects both sampling noise and hierarchical structure, reminding analysts that precision depends not only on sample size but also on how observations are organized across levels of government and geography (gelman2007data).
 
 
-> **Returning to the Case:** The teacher vacancy case makes the standard error tangible. A rural district with $n = 40$ positions reporting a 15\
+> **Returning to the Case:** The teacher vacancy case makes the standard error tangible. A rural district with $n = 40$ positions reporting a 15%
 
 ### Worked Example: Confidence Intervals for Voter Turnout
 
-Suppose we sample turnout rates from 25 Texas counties in a recent general election and observe a mean turnout of $x} = 58.2\
+Suppose we sample turnout rates from 25 Texas counties in a recent general election and observe a mean turnout of $x} = 58.2%
 
 **Step 1: Compute the standard error.**
 
 $$
-SE = s}{n}} = 9.4}{25}} = 9.4}{5} = 1.88\
+SE = s}{n}} = 9.4}{25}} = 9.4}{5} = 1.88%
 $$
 
 
-**Step 2: Construct a 95\
+**Step 2: Construct a 95%
 Using the approximate critical value $z^* = 1.96$:
 
 $$
@@ -174,12 +177,12 @@ $$
 
 
 $$
-95\
+95%
 $$
 
 
 **Step 3: Interpret.**
-We are 95\
+We are 95%
 
 
 *[Figure — see PDF version]*
@@ -190,7 +193,7 @@ We are 95\
 Standard errors quantify precision, but they are difficult for non-technical audiences to interpret on their own. Confidence intervals translate that precision into a range of plausible values for the parameter, providing a more intuitive way to communicate uncertainty to policymakers and the public.
 
 
-A 95\
+A 95%
 
 
 $$
@@ -198,7 +201,7 @@ X} \pm 1.96 \cdot SE(X}).
 $$
 
 
-The correct interpretation requires care. Across repeated sampling, 95\
+The correct interpretation requires care. Across repeated sampling, 95%
 
 
 Confidence intervals appear throughout public administration practice. Performance benchmarking relies on them to determine whether a district's service times are genuinely slower than the citywide average or merely reflect sampling noise. Equity analysis uses overlapping or non-overlapping intervals to assess whether delay differences across neighborhoods are real or attributable to chance (sampson2012great, chetty2016mto). Budget offices construct intervals around revenue forecasts to communicate the range of expected collections under economic uncertainty (blsHandbook). Federal reporting agencies publish margins of error alongside every ACS estimate precisely because the estimates are derived from samples, not censuses (uscensusACS).
@@ -299,7 +302,7 @@ Anscombe’s famous quartet illustrates why numerical inference alone is insuffi
     - Compute the standard error of mean completion times for three request categories in the
           311 dataset. Discuss how reporting processes shape uncertainty (austin311open, einav2014datarev).
 
-    - Construct 95\
+    - Construct 95%
           of neighborhood effects research (sampson2012great, chetty2016mto).
 
     - Using ACS margins of error for median income (uscensusACS), explain how sampling
@@ -311,7 +314,7 @@ Anscombe’s famous quartet illustrates why numerical inference alone is insuffi
     - Write a memo evaluating the credibility of a claim based on small-sample data. Use GAO
           criteria for data reliability (gaoDataQuality) and Manski’s argument against
           unwarranted certainty (manski2019policy).
-    - Download the voter turnout dataset from Appendix A. Select 10 small counties (population under 20,000) and 10 large counties (population over 200,000). For each group, compute the mean turnout rate, standard error, and 95\
+    - Download the voter turnout dataset from the [Course Datasets page](../datasets). Select 10 small counties (population under 20,000) and 10 large counties (population over 200,000). For each group, compute the mean turnout rate, standard error, and 95%
 
 
 ## Sources for Examples in This Chapter

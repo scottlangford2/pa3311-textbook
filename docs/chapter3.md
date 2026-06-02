@@ -7,6 +7,9 @@ permalink: /docs/chapter3/
 # Describing Data
 
 
+> **Course dataset & lab.** Work this chapter's techniques on our spine dataset — [Texas City Sales Panel](../datasets). Describe the 2024 distribution of `sales_tax_alloc_per_capita` (filter `year`): histogram, mean vs. median, outliers.
+
+
 ## Epigraphs
 
 
@@ -41,7 +44,7 @@ This case illustrates a foundational principle of descriptive statistics: a summ
 **Guiding Questions**
 
 
-    - If Houston reports an average 911 call abandonment rate of 12\
+    - If Houston reports an average 911 call abandonment rate of 12%
     - What graphical tools would reveal whether the abandonment problem is concentrated at specific times or spread evenly across the week?
     - How might the distribution of hold times differ from the distribution of abandonment rates, and why does the distinction matter for staffing decisions?
 
@@ -122,7 +125,7 @@ Recognizing this structure is essential for understanding the populations being 
 "average citizen," but groups with different needs and behaviors.
 
 
-> **Returning to the Case:** A histogram of Houston 911 call abandonment rates by shift would likely show exactly this kind of multimodal structure: a cluster of low rates during well-staffed daytime shifts and a second cluster of high rates during overnight and weekend shifts. The system-wide mean of 12\
+> **Returning to the Case:** A histogram of Houston 911 call abandonment rates by shift would likely show exactly this kind of multimodal structure: a cluster of low rates during well-staffed daytime shifts and a second cluster of high rates during overnight and weekend shifts. The system-wide mean of 12%
 
 
 ## Measures of Central Tendency
@@ -148,7 +151,7 @@ This distinction is crucial in assessing neighborhood effects, where extreme val
 aggregated metrics (sampson2012great).
 
 
-> **Returning to the Case:** In the Houston 911 case, the mean abandonment rate of 12\
+> **Returning to the Case:** In the Houston 911 case, the mean abandonment rate of 12%
 
 ### Mode
 
@@ -239,7 +242,7 @@ IQR} = Q_3 - Q_1
 $$
 
 
-captures the middle 50\
+captures the middle 50%
 or long tails, such as 311 service times (austin311open).
 
 ### Range
@@ -280,7 +283,7 @@ The IQR tells a different story than the standard deviation. County B has a wide
 ## Percentiles and Outliers
 
 Percentiles translate data into operational standards. For example, a department might aim to
-resolve 90\
+resolve 90%
 
 This logic echoes how neighborhood experts interpret distribution tails when assessing mobility
 outcomes (chetty2016mto).
@@ -407,7 +410,7 @@ Public-sector data rarely follow a normal distribution. EMS response times, 311 
     - Write a short memo interpreting outliers in one request category.
     Discuss whether these outliers reflect operational failures, rare events, or structural issues highlighted in neighborhood research (chetty2016mto).
     - Using the EMS response time data provided in this chapter's worked example (Table for Counties A and B), open Excel and verify the mean, median, and standard deviation calculations. Then create a histogram for each county using the Chart tool. In two sentences, explain what the histogram reveals that the mean alone does not.
-    - Download the voter turnout dataset from Appendix A. In Excel, compute the mean, median, and IQR of turnout rates across all counties for a single election year. Create a boxplot. Identify any outlier counties and speculate (in one paragraph) about what might explain their unusual turnout rates.
+    - Download the voter turnout dataset from the [Course Datasets page](../datasets). In Excel, compute the mean, median, and IQR of turnout rates across all counties for a single election year. Create a boxplot. Identify any outlier counties and speculate (in one paragraph) about what might explain their unusual turnout rates.
 
 
 ## Sources for Examples in This Chapter

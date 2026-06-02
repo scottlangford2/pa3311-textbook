@@ -7,6 +7,9 @@ permalink: /docs/chapter9/
 # Putting It All Together: Completing the Final Project
 
 
+> **Course dataset & lab.** Work this chapter's techniques on our spine dataset — [Texas City Sales Panel](../datasets). Pose and answer your own question using the panel.
+
+
 ## Epigraphs
 
 
@@ -113,7 +116,7 @@ Having described your data thoroughly, you are now equipped to move to Step Four
 
 
 > 
-**Briefing:** Good descriptive work often reveals 70\
+**Briefing:** Good descriptive work often reveals 70%
 
 
 ## Step Four: Applying Probability and Uncertainty
@@ -169,14 +172,14 @@ The inferential tools applied in Step Five provide the statistical foundation fo
 
 The analytical work is only as valuable as its communication. Your results section should integrate well-labeled tables, informative figures, and clear narrative interpretation into a coherent presentation that a non-specialist reader---a city manager, a budget officer, a council member---can follow without statistical training. Regression tables should include coefficients, standard errors, confidence intervals, and measures of model fit (adjusted $R^2$ at minimum), with clear labels that use variable names a reader can understand ("Debt-to-Revenue Ratio" rather than "X3"). Figures should include scatterplots of key relationships, diagnostic plots that demonstrate the model's assumptions are reasonably satisfied, and trend lines or grouped comparisons that make the story visible at a glance. Visualization principles from Tukey and Cleveland apply directly: every element of a graph should serve the analytical purpose, and chart junk should be eliminated (tukeyEDA, clevelandGraphing).
 
-The narrative that accompanies your tables and figures is where the real interpretation happens. Write results in plain, administrative English: "An additional 10 calls per department per week predicts 3.2 more minutes of average delay, holding staffing constant" is far more useful than "$\beta_1 = 0.32, p < 0.01$." Similarly, "Post-reform response times decreased by 1.7 minutes (95\
+The narrative that accompanies your tables and figures is where the real interpretation happens. Write results in plain, administrative English: "An additional 10 calls per department per week predicts 3.2 more minutes of average delay, holding staffing constant" is far more useful than "$\beta_1 = 0.32, p < 0.01$." Similarly, "Post-reform response times decreased by 1.7 minutes (95%
 
 Step Seven builds directly on the modeling work of Step Six: the regression results are now translated from technical output into a form that supports decision-making.
 
 
 ## Step Eight: Discussing Limitations and Uncertainty
 
-The strongest projects are not the ones with the most impressive results; they are the ones that most honestly confront the boundaries of their evidence. Your limitations section should address four categories of concern. First, data limitations: incomplete coverage, non-random missingness, measurement error, and changes in data collection procedures over time. If your dataset excludes certain types of incidents, certain time periods, or certain geographic areas, say so explicitly and explain how these gaps might affect your conclusions. Second, model limitations: the functional form you chose may not perfectly capture the true relationship, omitted variables may bias your estimates, and the assumptions underlying your statistical tests may not hold perfectly in your data. Third, uncertainty: report confidence intervals for your key estimates and discuss what those intervals imply about the range of plausible conclusions. A finding that permit processing times increased by 14 days (95\
+The strongest projects are not the ones with the most impressive results; they are the ones that most honestly confront the boundaries of their evidence. Your limitations section should address four categories of concern. First, data limitations: incomplete coverage, non-random missingness, measurement error, and changes in data collection procedures over time. If your dataset excludes certain types of incidents, certain time periods, or certain geographic areas, say so explicitly and explain how these gaps might affect your conclusions. Second, model limitations: the functional form you chose may not perfectly capture the true relationship, omitted variables may bias your estimates, and the assumptions underlying your statistical tests may not hold perfectly in your data. Third, uncertainty: report confidence intervals for your key estimates and discuss what those intervals imply about the range of plausible conclusions. A finding that permit processing times increased by 14 days (95%
 
 Manski's warning against "incredible certitude" should guide the tone of your entire discussion (manski2019policy). Acknowledging limitations does not weaken your project; it strengthens it by demonstrating analytical maturity. A reader who sees that you have anticipated the most important objections to your analysis will trust your findings more, not less.
 

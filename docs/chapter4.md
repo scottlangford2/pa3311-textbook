@@ -7,6 +7,9 @@ permalink: /docs/chapter4/
 # Probability and Uncertainty
 
 
+> **Course dataset & lab.** Work this chapter's techniques on our spine dataset — [Texas City Sales Panel](../datasets). Standardize per-capita sales tax within a year (z-scores) and use Excel's `NORM.S.DIST` to find proportions.
+
+
 ## Epigraphs
 
 
@@ -42,7 +45,7 @@ For an analyst, the flood map dispute is a case study in applied probability. Ev
 **Guiding Questions**
 
 
-    - What does it mean to say a neighborhood faces a "1\
+    - What does it mean to say a neighborhood faces a "1%
     - How do the assumptions built into FEMA's hydrological models---about rainfall, drainage capacity, and development patterns---shape the probability estimates on flood maps?
     - If flood risk depends on both location and infrastructure investment, how would you express this relationship using conditional probability?
 
@@ -175,7 +178,7 @@ $$
 P(X=3) = 5^3 \, e^{-5}}{3!} = 125 \times 0.0067}{6} = 0.842}{6} = 0.140
 $$
 
-There is approximately a 14\
+There is approximately a 14%
 
 **Step 2: $P(X \geq 8)$.**
 Rather than computing infinitely many terms, use the complement: $P(X \geq 8) = 1 - P(X \leq 7)$. Summing the Poisson PMF for $k = 0, 1, \ldots, 7$:
@@ -189,7 +192,7 @@ $$
 P(X \geq 8) = 1 - 0.8666 = 0.133
 $$
 
-About a 13\
+About a 13%
 
 
 *[Figure — see PDF version]*
@@ -275,7 +278,7 @@ Interpretation in public administration:
 
 ### Worked Example: Flood Probability Over a Mortgage
 
-A property in a FEMA 100-year flood zone faces a 1\
+A property in a FEMA 100-year flood zone faces a 1%
 
 **Step 1: Probability of no flood in a single year.**
 
@@ -299,7 +302,7 @@ P(at least one flood in 30 years}) = 1 - 0.740 = 0.260
 $$
 
 
-A 1\
+A 1%
 
 Conditional patterns often reveal deep institutional insights—for example, that delays cluster in
 specific neighborhoods or during certain seasons.
@@ -450,7 +453,7 @@ research (sampson2012great,chetty2016mto).
 
 ### Performance Standards
 
-Agencies often set probability-based standards (e.g., 90\
+Agencies often set probability-based standards (e.g., 90%
 (ombPerfGuide).
 
 
@@ -468,7 +471,7 @@ Small samples produce deceptive probabilities.
 ### Treating Rare Events as Impossible
 
 
-> **Returning to the Case:** Dallas homeowners frequently interpreted their "100-year flood zone" designation as meaning a flood would not happen in their lifetime. But a 1\
+> **Returning to the Case:** Dallas homeowners frequently interpreted their "100-year flood zone" designation as meaning a flood would not happen in their lifetime. But a 1%
 
 ### Ignoring Data-Generating Processes
 
