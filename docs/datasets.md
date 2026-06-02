@@ -6,7 +6,7 @@ permalink: /docs/datasets/
 
 # Course Datasets
 
-We use **one Texas dataset across the whole course**, so every technique builds on data you already know. Download the files and work the exercises in Excel (enable the **Data Analysis ToolPak**).
+We use **two Texas datasets across the course** — a public-administration spine (city sales tax, for PA 3311) and a political-science spine (county voter turnout & elections, for PS 3315). Every technique builds on data you already know. Download the files and work the exercises in Excel (enable the **Data Analysis ToolPak**).
 
 ![Texas city sales data at a glance]({{ '/data/spine_glance.png' | relative_url }})
 
@@ -23,6 +23,15 @@ One row per city (1,202 cities) for a single year, adding **debt** and property/
 
 - 📊 [Download (Excel)]({{ '/data/TX_City_Finance_2022.xlsx' | relative_url }})
 - 📄 [Download (CSV)]({{ '/data/TX_City_Finance_2022.csv' | relative_url }})
+
+## Second spine — Texas County Political Panel (2000–2024)
+
+For the political-science side (PS 3315): one row per **county per presidential election** — **254 counties × 7 elections (2000–2024) = 1,778 rows**. Vote totals and Republican/Democratic two-party share, turnout (votes ÷ voting-age population, 2012–2024), plus demographic (population, race/ethnicity, median age, density, metro status) and socioeconomic (median household income, poverty, unemployment, % bachelor's+) characteristics — so you can run the same methods on political outcomes.
+
+- 📄 [**Download (CSV)**]({{ '/data/TX_County_Political_Panel_2000_2024.csv' | relative_url }})
+- 📘 [Codebook]({{ '/data/CODEBOOK_county_panel.md' | relative_url }}) — variables, sources (MIT Election Lab, Census PEP/SAIPE, USDA ERS), and limitations
+
+Sample questions: do **metro vs. rural** counties differ in turnout (independent *t*-test)? Did a county's partisan share shift **2016 vs. 2020** (paired *t*-test)? Does **income or education predict turnout** (regression)?
 
 ## Documentation
 
