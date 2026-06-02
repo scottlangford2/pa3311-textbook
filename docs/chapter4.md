@@ -22,20 +22,19 @@ permalink: /docs/chapter4/
 > 
 *"Not everything that counts can be counted, and not everything that can be counted counts."*
 
- Attributed to Einstein(einsteinIdeas)
+ Attributed to Einstein
 
 
 Public administrators confront uncertainty far more often than certainty. Emergency calls fluctuate
 hour by hour, budgets shift with economic cycles, and neighborhood-level outcomes vary in ways
-that reflect both structural inequalities and unpredictable shocks (sampson2012great,
-chetty2016mto). Probability is the set of ideas and tools we use to formalize—rather than eliminate—
+that reflect both structural inequalities and unpredictable shocks (Sampson 2012; Chetty & Hendren 2016). Probability is the set of ideas and tools we use to formalize—rather than eliminate—
 uncertainty.
 
 
 ## Opening Case: Dallas Flood Maps and the Meaning of a "100-Year Flood"
 
 
-In 2023, the Dallas Morning News reported that updated Federal Emergency Management Agency (FEMA) flood-plain maps would redraw the boundaries of high-risk flood zones across Dallas County, adding thousands of properties to areas requiring federal flood insurance and removing others (dmnFloodMaps). The changes provoked sharp debate. Homeowners newly placed in flood zones faced insurance costs of several thousand dollars per year. Developers whose properties were removed from risk zones gained approval for projects that had previously been blocked. City engineers argued that the new maps better reflected current drainage infrastructure, while residents countered that the models failed to account for recent upstream development that had increased impervious surface area and runoff.
+In 2023, the Dallas Morning News reported that updated Federal Emergency Management Agency (FEMA) flood-plain maps would redraw the boundaries of high-risk flood zones across Dallas County, adding thousands of properties to areas requiring federal flood insurance and removing others (Dallas Morning News 2023). The changes provoked sharp debate. Homeowners newly placed in flood zones faced insurance costs of several thousand dollars per year. Developers whose properties were removed from risk zones gained approval for projects that had previously been blocked. City engineers argued that the new maps better reflected current drainage infrastructure, while residents countered that the models failed to account for recent upstream development that had increased impervious surface area and runoff.
 
 At the center of the controversy was a deceptively simple concept: the "100-year flood." FEMA defines this as a flood event with a 1 percent annual probability of occurrence---not, as many residents assumed, a flood that happens once every hundred years. The distinction matters enormously. A 1 percent annual probability implies roughly a 26 percent chance of at least one such event over a 30-year mortgage. Misunderstanding this probability led both homeowners and elected officials to underestimate risk, while critics of the maps argued that even the 1 percent figure was too low given changing land use patterns and climate trends.
 
@@ -45,7 +44,7 @@ For an analyst, the flood map dispute is a case study in applied probability. Ev
 **Guiding Questions**
 
 
-    - What does it mean to say a neighborhood faces a "1%
+    - What does it mean to say a neighborhood faces a "1% annual chance" of flooding, and why is that not the same as one flood per century?
     - How do the assumptions built into FEMA's hydrological models---about rainfall, drainage capacity, and development patterns---shape the probability estimates on flood maps?
     - If flood risk depends on both location and infrastructure investment, how would you express this relationship using conditional probability?
 
@@ -56,10 +55,10 @@ Probability is foundational to every topic that follows: sampling, confidence in
 testing, regression, forecasting. Without a clear understanding of uncertainty, statistical
 inference collapses into guesswork.
 
-In public administration, uncertainty is not merely an academic abstraction; it is an everyday operational constraint. City 311 call volumes spike unpredictably during storms or heat events (austin311open), and EMS incidents vary by hour, neighborhood, and season in ways that no deterministic staffing plan can fully anticipate. Demand for public services depends on economic conditions and community behavior, while budget revenues fluctuate with tax bases and business cycles. These sources of variation are not anomalies to be eliminated; they are inherent features of the systems administrators manage.
+In public administration, uncertainty is not merely an academic abstraction; it is an everyday operational constraint. City 311 call volumes spike unpredictably during storms or heat events (City of Austin open data), and EMS incidents vary by hour, neighborhood, and season in ways that no deterministic staffing plan can fully anticipate. Demand for public services depends on economic conditions and community behavior, while budget revenues fluctuate with tax bases and business cycles. These sources of variation are not anomalies to be eliminated; they are inherent features of the systems administrators manage.
 
 
-As Einav and Levin note, modern administrative datasets are shaped by data-generating rules, operational constraints, and behavioral responses---not idealized experiments (einav2014datarev). Probability provides structure for interpreting such data, allowing analysts to distinguish meaningful patterns from routine noise.
+As Einav and Levin note, modern administrative datasets are shaped by data-generating rules, operational constraints, and behavioral responses---not idealized experiments (Einav & Levin 2014). Probability provides structure for interpreting such data, allowing analysts to distinguish meaningful patterns from routine noise.
 
 
 > 
@@ -74,7 +73,7 @@ Uncertainty arises when outcomes vary from one instance to the next. This variat
 Uncertainty appears in administrative datasets in two broad forms. The first is observable randomness: the number of pothole complaints varies day to day even when nothing about the road system has changed, daily water usage fluctuates with temperature, and EMS call rates shift by hour in patterns that are broadly predictable but never exact. Analysts can see this variation directly in the data and model it with probability distributions.
 
 
-The second form is latent, structural randomness---uncertainty introduced by data-entry delays, categorization differences across staff members, and institutional processes that vary from one department to another. This type of variation is harder to detect because it is embedded in how data are collected and recorded rather than in the events themselves. Both forms reflect the institutional complexity highlighted in work on administrative data and neighborhood systems (einav2014datarev, sampson2012great).
+The second form is latent, structural randomness---uncertainty introduced by data-entry delays, categorization differences across staff members, and institutional processes that vary from one department to another. This type of variation is harder to detect because it is embedded in how data are collected and recorded rather than in the events themselves. Both forms reflect the institutional complexity highlighted in work on administrative data and neighborhood systems (Einav & Levin 2014; Sampson 2012).
 
 
 ## Probability Basics
@@ -117,7 +116,7 @@ A random variable maps uncertain events onto numbers. In government operations, 
 A random variable $X$ may be discrete or continuous, and the distinction determines which probability models are appropriate. A discrete random variable takes on countable values, expressed as $X \in \{0, 1, 2, \ldots\}$. In the public sector, discrete random variables include the number of complaints received by a department in a day, the number of police incidents in a precinct during a shift, and the number of failed building inspections in a quarter. Because these variables count events, they are naturally modeled by distributions defined over non-negative integers.
 
 
-A continuous random variable takes on values along a continuum, expressed as $X \in R}$. Examples from public administration include the time required to complete a service request, the dollar amount of property damage from a storm, and temperature-related demand for electricity. Continuous variables require density functions rather than simple probability tables, and their distributions often exhibit skewness and heavy tails that reflect the operational realities of government service delivery. Recognizing whether a variable is discrete or continuous is the first step toward selecting an appropriate probability model.
+A continuous random variable takes on values along a continuum, expressed as $X \in \mathbb{R}$. Examples from public administration include the time required to complete a service request, the dollar amount of property damage from a storm, and temperature-related demand for electricity. Continuous variables require density functions rather than simple probability tables, and their distributions often exhibit skewness and heavy tails that reflect the operational realities of government service delivery. Recognizing whether a variable is discrete or continuous is the first step toward selecting an appropriate probability model.
 
 
 ## Probability Distributions
@@ -144,7 +143,7 @@ Descriptive statistics tell us what happened in a sample; probability distributi
 patterns we expect in the long run.
 
 This distinction mirrors the difference between neighborhood-level descriptive variation
-(sampson2012great) and national-level probabilistic mobility forecasts (chetty2016mto).
+(Sampson 2012) and national-level probabilistic mobility forecasts (Chetty & Hendren 2016).
 
 
 > 
@@ -162,7 +161,7 @@ The Poisson distribution models counts of independent events occurring over a fi
 
 
 $$
-P(X=k) = \lambda^k e^{-\lambda}}{k!}.
+P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}.
 $$
 
 
@@ -175,10 +174,10 @@ Suppose a city department receives an average of $\lambda = 5$ complaints per ho
 **Step 1: $P(X = 3)$.**
 
 $$
-P(X=3) = 5^3 \, e^{-5}}{3!} = 125 \times 0.0067}{6} = 0.842}{6} = 0.140
+P(X=3) = \frac{5^3 \, e^{-5}}{3!} = \frac{125 \times 0.0067}{6} = \frac{0.842}{6} = 0.140
 $$
 
-There is approximately a 14%
+There is approximately a 14% chance of receiving exactly 3 complaints in a given hour.
 
 **Step 2: $P(X \geq 8)$.**
 Rather than computing infinitely many terms, use the complement: $P(X \geq 8) = 1 - P(X \leq 7)$. Summing the Poisson PMF for $k = 0, 1, \ldots, 7$:
@@ -192,10 +191,10 @@ $$
 P(X \geq 8) = 1 - 0.8666 = 0.133
 $$
 
-About a 13%
+About a 13% chance of an unusually high-volume hour with 8 or more complaints.
 
 
-*[Figure — see PDF version]*
+*Figure: The Poisson distribution for $\lambda = 5$ complaints per hour, with probability mass concentrated between 2 and 8 complaints and a long right tail.*
 
 
 ### Exponential Distribution
@@ -218,13 +217,65 @@ Applications:
 
 ### Normal Distribution
 
-Although much administrative data are skewed (austin311open), some aggregated measures
+Although much administrative data are skewed (City of Austin open data), some aggregated measures
 approximate normality due to the central limit theorem (Section below).
 
 ### Heavy-Tailed Distributions
 
 Completion times, repair delays, and public complaints often follow long right-tailed distributions
-because institutional bottlenecks produce extreme but informative cases (einav2014datarev).
+because institutional bottlenecks produce extreme but informative cases (Einav & Levin 2014).
+
+
+## The Normal Curve and z-Scores
+
+The normal distribution—the familiar symmetric, bell-shaped curve—is the most important continuous distribution in statistics. Many measured quantities cluster around a central value, with values farther from the center growing progressively less common, and the normal curve gives this pattern a precise mathematical form. A normal distribution is fully described by just two numbers: its mean, which locates the center, and its standard deviation, which controls how spread out the values are.
+
+Its central role comes partly from the Central Limit Theorem (discussed below): even when the underlying data are not normal, averages and totals computed from large samples tend toward a normal shape. This is why so much of statistical inference—confidence intervals, hypothesis tests, performance bands—rests on normal-curve reasoning.
+
+### The Empirical Rule
+
+For any normal distribution, the proportion of values falling within a given number of standard deviations of the mean is fixed. This is the **empirical rule**, often summarized as 68/95/99.7:
+
+    - About **68%** of values fall within 1 standard deviation of the mean,
+    - About **95%** fall within 2 standard deviations,
+    - About **99.7%** fall within 3 standard deviations.
+
+These benchmarks let an analyst judge quickly whether an observation is typical or unusual. A value more than two standard deviations from the mean lands in the outer 5% of a normal distribution—rare enough to warrant a second look.
+
+### z-Scores: Standardizing a Value
+
+To compare a value to the rest of its distribution, we convert it into a **z-score**, which expresses how many standard deviations the value lies above or below the mean:
+
+$$
+z = \frac{x - \bar{x}}{s}.
+$$
+
+A positive z-score means the value is above the mean; a negative one means below. A z-score of 0 sits exactly at the mean. Because z-scores are expressed in standard-deviation units, they let us place any value on a common scale and read off the area to its left—the percentile—from the standard normal curve.
+
+### Reading Areas and Percentiles
+
+The area under the normal curve to the left of a given z-score equals the proportion of values below it, which is its percentile. A z-score of 0 corresponds to the 50th percentile; a z-score of about 1.0 corresponds to roughly the 84th percentile (since 50% sit below the mean and another 34% sit between the mean and one standard deviation above it). Rather than memorizing a table, analysts read these areas directly with spreadsheet functions.
+
+### Doing It in Excel
+
+Excel handles every step of normal-curve work:
+
+    - `STANDARDIZE(x, mean, standard_dev)` converts a raw value into its z-score.
+    - `NORM.S.DIST(z, TRUE)` returns the area to the left of a z-score on the *standard* normal curve (mean 0, SD 1)—that is, the percentile.
+    - `NORM.DIST(x, mean, standard_dev, TRUE)` returns the area to the left of a raw value directly, without first computing a z-score.
+    - `NORM.INV(probability, mean, standard_dev)` runs the calculation in reverse: given a percentile, it returns the value at that point in the distribution.
+
+The `TRUE` argument requests the cumulative area (the percentile); `FALSE` would instead return the height of the curve, which is rarely what an analyst wants.
+
+> **Spine dataset.** Across our 1,180 Texas cities, 2024 per-capita sales tax averages about \$395 with a standard deviation of about \$596. Consider a city collecting \$585 per resident. Its z-score is
+>
+> $$
+> z = \frac{585 - 395}{596} \approx 0.32.
+> $$
+>
+> Entering `=NORM.S.DIST(0.32,TRUE)` returns about 0.63, so this city sits near the **63rd percentile**—higher than roughly two-thirds of Texas cities. Equivalently, `=NORM.DIST(585,395,596,TRUE)` gives the same answer without the intermediate z-score.
+
+> **Caution: the normal model is only approximate here.** Per-capita sales tax is strongly right-skewed—a handful of tourism- and retail-heavy cities collect far more than the typical city—so the symmetric normal curve fits the data only loosely. The mismatch is easy to see at the tails. The normal model with mean \$395 and SD \$596 predicts that about 43% of cities exceed \$500 (`=1-NORM.DIST(500,395,596,TRUE)`), yet only about 21% of cities actually do. When a distribution is skewed, treat normal-curve percentiles as rough guides, not exact statements, and check them against the data.
 
 
 ## Joint Probability and Dependence
@@ -253,7 +304,7 @@ Dependence is common in public operations:
 
 
 Such dependencies mirror the structural clustering documented in neighborhood-level research
-(sampson2012great).
+(Sampson 2012).
 
 
 ## Conditional Probability
@@ -262,28 +313,28 @@ Conditional probability focuses on how one event affects another:
 
 
 $$
-P(A \mid B) = P(A \cap B)}{P(B)}.
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}.
 $$
 
 
 Interpretation in public administration:
 
 
-    - $P(delay} \mid weekend})$
-    - $P(high EMS volume} \mid heat advisory})$
-    - $P(missing data} \mid department})$ (gaoDataQuality)
+    - $P(\text{delay} \mid \text{weekend})$
+    - $P(\text{high EMS volume} \mid \text{heat advisory})$
+    - $P(\text{missing data} \mid \text{department})$ (U.S. GAO data-quality guidance)
 
 
-> **Returning to the Case:** The Dallas flood map case is a natural application of conditional probability. Residents want to know $P(flood} \mid in FEMA zone})$ versus $P(flood} \mid not in FEMA zone})$. But the probability also depends on infrastructure: $P(flood} \mid in zone, new drainage})$ may differ substantially from $P(flood} \mid in zone, aging infrastructure})$. The policy debate over flood maps is, at its core, a debate about which conditioning variables belong in the probability model.}
+> **Returning to the Case:** The Dallas flood map case is a natural application of conditional probability. Residents want to know $P(\text{flood} \mid \text{in FEMA zone})$ versus $P(\text{flood} \mid \text{not in FEMA zone})$. But the probability also depends on infrastructure: $P(\text{flood} \mid \text{in zone, new drainage})$ may differ substantially from $P(\text{flood} \mid \text{in zone, aging infrastructure})$. The policy debate over flood maps is, at its core, a debate about which conditioning variables belong in the probability model.
 
 ### Worked Example: Flood Probability Over a Mortgage
 
-A property in a FEMA 100-year flood zone faces a 1%
+A property in a FEMA 100-year flood zone faces a 1% annual probability of a major flood. What is the probability of at least one flood over a 30-year mortgage?
 
 **Step 1: Probability of no flood in a single year.**
 
 $$
-P(no flood in year } i) = 1 - 0.01 = 0.99
+P(\text{no flood in year } i) = 1 - 0.01 = 0.99
 $$
 
 
@@ -291,18 +342,18 @@ $$
 Assuming independence across years:
 
 $$
-P(no flood in 30 years}) = 0.99^{30} = 0.740
+P(\text{no flood in 30 years}) = 0.99^{30} = 0.740
 $$
 
 
 **Step 3: Complement.**
 
 $$
-P(at least one flood in 30 years}) = 1 - 0.740 = 0.260
+P(\text{at least one flood in 30 years}) = 1 - 0.740 = 0.260
 $$
 
 
-A 1%
+A 1% annual flood risk translates into roughly a 26% chance of at least one major flood over a 30-year mortgage—far higher than most homeowners assume.
 
 Conditional patterns often reveal deep institutional insights—for example, that delays cluster in
 specific neighborhoods or during certain seasons.
@@ -318,7 +369,7 @@ Bayes' Rule updates beliefs in light of new evidence:
 
 
 $$
-P(A \mid B) = P(B \mid A) P(A)}{P(B)}.
+P(A \mid B) = \frac{P(B \mid A) P(A)}{P(B)}.
 $$
 
 
@@ -340,12 +391,12 @@ The expected value of a random variable $X$ is its long-run average:
 
 
 $$
-E[X] = \sum_i x_i P(X=x_i) \quad (discrete)},
+E[X] = \sum_i x_i P(X=x_i) \quad \text{(discrete)},
 $$
 
 
 $$
-E[X] = \int x f(x) \, dx \quad (continuous)}.
+E[X] = \int x f(x) \, dx \quad \text{(continuous)}.
 $$
 
 
@@ -353,7 +404,7 @@ Variance measures dispersion:
 
 
 $$
-Var}(X) = E[(X - E[X])^2].
+\text{Var}(X) = E[(X - E[X])^2].
 $$
 
 
@@ -363,11 +414,11 @@ These quantities are not just mathematical abstractions. They apply directly to:
     - forecasting call volumes,
     - budgeting under uncertainty,
     - assessing workload variability,
-    - designing performance standards (ombPerfGuide).
+    - designing performance standards (U.S. OMB performance guidance).
 
 
 High-variance neighborhoods often correspond to the structural inequalities documented in urban
-research (sampson2012great).
+research (Sampson 2012).
 
 
 ## Law of Large Numbers
@@ -376,7 +427,7 @@ The Law of Large Numbers (LLN) states:
 
 
 $$
-X}_n \to E[X] \quad as } n \to \infty.
+\bar{X}_n \to E[X] \quad \text{as } n \to \infty.
 $$
 
 
@@ -384,7 +435,7 @@ This explains why aggregated administrative metrics (monthly totals, yearly aver
 even when individual observations vary wildly.
 
 Federal agencies such as the Census Bureau and the Bureau of Labor Statistics (BLS) rely on LLN when reporting economic and
-demographic indicators (uscensusACS, blsHandbook).
+demographic indicators (U.S. Census ACS; BLS).
 
 
 > 
@@ -398,7 +449,7 @@ normal distribution:
 
 
 $$
-X} - E[X]}{\sigma/n}} \to N(0, 1).
+\frac{\bar{X} - E[X]}{\sigma/\sqrt{n}} \to N(0, 1).
 $$
 
 
@@ -411,7 +462,7 @@ The CLT justifies why:
 
 
 But independence and identical distribution assumptions can fail in neighborhood-level processes
-(sampson2012great), which is why analysts must interpret CLT results carefully.
+(Sampson 2012), which is why analysts must interpret CLT results carefully.
 
 
 > 
@@ -424,7 +475,7 @@ But independence and identical distribution assumptions can fail in neighborhood
 
 
 $$
-P(High Volume Tomorrow})
+P(\text{High Volume Tomorrow})
 $$
 
 
@@ -434,7 +485,7 @@ Used by 311 call centres to schedule staffing during weather events.
 
 
 $$
-P(Severe Delay} \mid Low Staffing})
+P(\text{Severe Delay} \mid \text{Low Staffing})
 $$
 
 
@@ -444,17 +495,16 @@ Helps identify operational vulnerabilities.
 
 
 $$
-P(Delay} \mid Neighbourhood Characteristics})
+P(\text{Delay} \mid \text{Neighbourhood Characteristics})
 $$
 
 
 Connects descriptive disparities to structural probabilities, consistent with neighborhood effects
-research (sampson2012great,chetty2016mto).
+research (Sampson 2012; Chetty & Hendren 2016).
 
 ### Performance Standards
 
-Agencies often set probability-based standards (e.g., 90%
-(ombPerfGuide).
+Agencies often set probability-based standards (e.g., 90% of calls answered within 30 seconds), drawing on federal performance-measurement guidance (U.S. OMB performance guidance).
 
 
 ## Common Pitfalls
@@ -471,11 +521,11 @@ Small samples produce deceptive probabilities.
 ### Treating Rare Events as Impossible
 
 
-> **Returning to the Case:** Dallas homeowners frequently interpreted their "100-year flood zone" designation as meaning a flood would not happen in their lifetime. But a 1%
+> **Returning to the Case:** Dallas homeowners frequently interpreted their "100-year flood zone" designation as meaning a flood would not happen in their lifetime. But a 1% annual probability is far from impossible: over a 30-year mortgage it implies roughly a 26% chance of at least one major flood. Treating a rare event as an impossible one is one of the most consequential errors in applied probability.
 
 ### Ignoring Data-Generating Processes
 
-Analysts must understand how data are collected (einav2014datarev, gaoDataQuality) before
+Analysts must understand how data are collected (Einav & Levin 2014; U.S. GAO data-quality guidance) before
 applying probability models.
 
 Rare-but-consequential events (system outages, extreme delays, revenue collapses) matter
@@ -489,11 +539,11 @@ disproportionately.
 ## Practice and Application
 
 
-    - Using 311 completion time data, estimate $P(Delay} > 7 days})$ and compare across neighborhoods (sampson2012great).
+    - Using 311 completion time data, estimate $P(\text{Delay} > 7 \text{ days})$ and compare across neighborhoods (Sampson 2012).
 
-    - Compute conditional probabilities such as $P(High Volume} \mid Rain})$ using hourly call data (austin311open).
+    - Compute conditional probabilities such as $P(\text{High Volume} \mid \text{Rain})$ using hourly call data (City of Austin open data).
 
-    - Simulate Poisson arrivals for EMS calls and compare simulation outcomes with real administrative data (dshsEMS).
+    - Simulate Poisson arrivals for EMS calls and compare simulation outcomes with real administrative data (Texas DSHS EMS data).
 
     - Use Bayes’ Rule to update the probability of a major outage given new weather alerts.
 
@@ -505,16 +555,16 @@ disproportionately.
 ## Sources for Examples in This Chapter
 
 
-    - City of Austin 311 open data portal (austin311open).
-    - Administrative data processes (einav2014datarev).
-    - Neighbourhood variation research (sampson2012great,chetty2016mto).
-    - Federal standards and measurement guidance (ombPerfGuide).
-    - Data reliability and reporting guidance (gaoDataQuality).
-    - ACS and BLS methodological documentation (uscensusACS,blsHandbook).
+    - City of Austin 311 open data portal (City of Austin open data).
+    - Administrative data processes (Einav & Levin 2014).
+    - Neighbourhood variation research (Sampson 2012; Chetty & Hendren 2016).
+    - Federal standards and measurement guidance (U.S. OMB performance guidance).
+    - Data reliability and reporting guidance (U.S. GAO data-quality guidance).
+    - ACS and BLS methodological documentation (U.S. Census ACS; BLS).
 
 
 ## Transition to Chapter Five
 
 Probability provides the conceptual foundation for statistical inference. In the next chapter,
 we use probability to evaluate whether differences in data are meaningful or simply due to chance.
-Chapter~*chap:inference* introduces that toolkit.
+Chapter 5 introduces that toolkit.

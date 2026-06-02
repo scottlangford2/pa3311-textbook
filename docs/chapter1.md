@@ -13,13 +13,13 @@ permalink: /docs/chapter1/
 > 
 *``If you can't measure it, you can't improve it.''*
 
- Peter F.~Drucker (drucker1973,drucker1966)
+ Peter F. Drucker (Drucker 1973, 1966)
 
 
 > 
 *``You've got to know what you're doing before you can do it right.''*
 
- Willie Nelson (nelsonTexMonthly,nelsonACL)
+ Willie Nelson (Nelson, Texas Monthly; Austin City Limits)
 
 
 These quotations capture the analytical spirit of this course. Drucker’s maxim highlights the
@@ -31,7 +31,7 @@ mind developed in this chapter.
 ## Opening Case: Winter Storm Uri and the Battle Over Grid Failure Data
 
 
-In February 2021, Winter Storm Uri struck Texas, producing the most catastrophic power failure in the state's modern history. Millions of residents lost electricity for days in subfreezing temperatures. In the aftermath, public agencies, journalists, and researchers attempted to quantify what had happened---and immediately encountered conflicting numbers. Various parties offered competing explanations: the Electric Reliability Council of Texas (ERCOT) pointed to surging demand, engineers cited failures in natural gas supply infrastructure, and some commentators attributed losses to frozen wind turbines, though grid data showed wind represented a small share of total generation loss (tribuneWinterStorm2021). This textbook takes no position on the policy or regulatory debates surrounding the grid failure; the case is used here because the competing claims illustrate fundamental challenges in measurement, data collection, and analytical interpretation.
+In February 2021, Winter Storm Uri struck Texas, producing the most catastrophic power failure in the state's modern history. Millions of residents lost electricity for days in subfreezing temperatures. In the aftermath, public agencies, journalists, and researchers attempted to quantify what had happened---and immediately encountered conflicting numbers. Various parties offered competing explanations: the Electric Reliability Council of Texas (ERCOT) pointed to surging demand, engineers cited failures in natural gas supply infrastructure, and some commentators attributed losses to frozen wind turbines, though grid data showed wind represented a small share of total generation loss (Texas Tribune 2021). This textbook takes no position on the policy or regulatory debates surrounding the grid failure; the case is used here because the competing claims illustrate fundamental challenges in measurement, data collection, and analytical interpretation.
 
 The disagreements extended to human consequences. The official state death toll, compiled from death certificates listing hypothermia or storm-related causes, initially stood at 246. Independent analyses by investigative reporters and epidemiologists---using excess-mortality methods that compared observed deaths during the storm period against historical baselines---estimated the toll at 700 or higher. The same event, the same weeks, the same state: yet the numbers diverged by a factor of three, because different agencies used different definitions, different data collection methods, and different counting rules.
 
@@ -73,13 +73,13 @@ geography, and policy constraints. Understanding this context is not optional; i
 the analytical task.
 
 
-> **Returning to the Case:** The Winter Storm Uri death toll dispute illustrates this directly. Death certificates---the data source for the official count---reflect choices made by county medical examiners about how to classify cause of death. Excess-mortality estimates use a different data source entirely: total death counts compared against historical baselines. Neither method is wrong, but each answers a slightly different question. The analyst who treats either number as "the truth" without understanding the measurement system behind it has already made an error.}
+> **Returning to the Case:** The Winter Storm Uri death toll dispute illustrates this directly. Death certificates---the data source for the official count---reflect choices made by county medical examiners about how to classify cause of death. Excess-mortality estimates use a different data source entirely: total death counts compared against historical baselines. Neither method is wrong, but each answers a slightly different question. The analyst who treats either number as "the truth" without understanding the measurement system behind it has already made an error.
 
 Consider a dataset of EMS response times from the Texas Department of State Health Services
 (DSHS). On the surface, it lists durations between call receipt and arrival on scene. In reality,
 each number reflects call triage practices, dispatcher training, ambulance availability, traffic
 conditions, neighborhood street design, and the maintenance schedules of aging vehicles
-(dshsEMS). To interpret such data responsibly, the analyst must think about these forces
+(Texas DSHS EMS data). To interpret such data responsibly, the analyst must think about these forces
 before drawing conclusions.
 
 The same logic applies across all techniques. Descriptive statistics summarize behavior, but they
@@ -103,7 +103,10 @@ analysts must actively interrogate patterns rather than accept them at face valu
 Consider two Texas counties that both report an average EMS response time of 12 minutes. On the surface, they appear identical. But examine the underlying data:
 
 
-*[Table — see PDF version]*
+| County | Mean response | Median response | Notable feature |
+|--------|---------------|-----------------|-----------------|
+| A | 12 minutes | 9.5 minutes | One 36-minute call (outlier) |
+| B | 12 minutes | 12 minutes | Consistent performance |
 
 
 County A's average is pulled up by a single 36-minute call---likely a rural incident with long travel distance. Its *typical* response (the median) is actually 9.5 minutes. County B's mean and median are identical, indicating consistent performance. A city manager who sees only the average would treat these counties the same. An analyst who looks deeper would recognize that County A has an outlier problem requiring targeted intervention, while County B has a systemic issue affecting all calls. The analytical habits introduced in this chapter---asking precise questions, understanding how data are generated, and staying skeptical of summary numbers---are what distinguish these two conclusions.
@@ -113,11 +116,11 @@ County A's average is pulled up by a single 36-minute call---likely a rural inci
 A superficial analysis of statewide EMS response data might compute a single average and consider
 the matter settled. A deeper look quickly reveals disparities. Rural counties often lack full-time
 ambulance coverage, relying on volunteers who respond from home. Urban jurisdictions record
-thousands of calls per month, creating congestion in dispatch systems. Neighborhoods classified as "historically redlined"---a designation drawn from federal Home Owners' Loan Corporation maps of the 1930s and used as a standard variable in contemporary urban research---show persistently slower response times, a pattern researchers attribute to decades of reduced infrastructure investment in those areas (andersonAmbulanceDeserts,hassaneinRedlined).
+thousands of calls per month, creating congestion in dispatch systems. Neighborhoods classified as "historically redlined"---a designation drawn from federal Home Owners' Loan Corporation maps of the 1930s and used as a standard variable in contemporary urban research---show persistently slower response times, a pattern researchers attribute to decades of reduced infrastructure investment in those areas (Anderson; Hassanein).
 
 In some counties, long distances and sparse station coverage drive higher averages. In others,
 reporting systems are incomplete: calls may be recorded without full timestamps, or only a subset
-of incidents may be uploaded to the state system (dshsEMS). One county may appear to have
+of incidents may be uploaded to the state system (Texas DSHS EMS data). One county may appear to have
 exceptionally fast response times simply because it submitted only a handful of cases that month.
 Another may look slow because its data-entry procedures timestamp calls differently.
 
@@ -134,9 +137,9 @@ or effectiveness.
 
 City financial statements tell a similarly complicated story. The City of Austin’s Annual
 Comprehensive Financial Report (ACFR) lists revenue from property taxes, sales taxes, charges for
-services, grants, and enterprise activities (austinACFR). A simple year-over-year comparison
+services, grants, and enterprise activities (City of Austin ACFR). A simple year-over-year comparison
 can mask larger structural shifts: tourism cycles, population growth, new fee structures, or
-legislative limits on tax rates (tribuneBudget).
+legislative limits on tax rates (Texas Tribune).
 
 A spike in sales-tax revenue may signal economic growth—or it may reflect one-time events,
 inflation, or a change in vendor remittance schedules. A dip in enterprise revenue may result
@@ -172,7 +175,7 @@ these pitfalls is central to analytical discipline.
 
 
 *Confusing precision with accuracy* occurs when analysts mistake fine-grained measurement for reliable measurement. More decimal places do not mean more truth; they mean only that the recording instrument is detailed, not that it is correct. 
-> **Returning to the Case:** ERCOT reported outage durations to the minute during Winter Storm Uri, but the underlying data contained large temporal gaps where monitoring equipment had itself lost power. Precise timestamps masked fundamentally incomplete records.} This pitfall is particularly seductive in an era of dashboards and automated reporting, where the polish of the output can obscure the fragility of the input.
+> **Returning to the Case:** ERCOT reported outage durations to the minute during Winter Storm Uri, but the underlying data contained large temporal gaps where monitoring equipment had itself lost power. Precise timestamps masked fundamentally incomplete records. This pitfall is particularly seductive in an era of dashboards and automated reporting, where the polish of the output can obscure the fragility of the input.
 
 
 *Assuming stability means reliability* is a subtler trap. Smooth trends can mask corrections, backfilled records, or quiet redefinitions of what is being counted. A performance metric that holds steady for three years may reflect genuine consistency---or it may reflect an agency that updates its numbers retroactively, smoothing out embarrassing fluctuations before they reach the public. Analysts should investigate the editorial history of any dataset that appears suspiciously stable.
@@ -230,12 +233,12 @@ Three anchor examples appear throughout this textbook to illustrate analytical c
 This chapter draws on real reporting and administrative datasets used throughout the book:
 
 
-  - DSHS EMS 911 Run Times Dashboard and Technical Notes ((dshsEMS)).
-  - Anderson, J. "Rural Ambulance Funding" in *County Progress* (andersonAmbulanceDeserts).
-  - Hassanein, N. "Historically Redlined Communities Have Slower EMS Response Times" in *Stateline* (hassaneinRedlined).
-  - City of Austin Annual Comprehensive Financial Report ((austinACFR)).
-  - Texas Tribune reporting on local budgets and opioid mortality ((tribuneBudget), (simpsonAstudillo)).
-  - San Antonio Express-News statewide reporting on synthetic opioid trends ((expressNewsOpioids)).
+  - DSHS EMS 911 Run Times Dashboard and Technical Notes (Texas DSHS EMS data).
+  - Anderson, J. "Rural Ambulance Funding" in *County Progress* (Anderson).
+  - Hassanein, N. "Historically Redlined Communities Have Slower EMS Response Times" in *Stateline* (Hassanein).
+  - City of Austin Annual Comprehensive Financial Report (City of Austin ACFR).
+  - Texas Tribune reporting on local budgets and opioid mortality (Texas Tribune).
+  - San Antonio Express-News statewide reporting on synthetic opioid trends (San Antonio Express-News).
 
 
 ## Transition to Chapter Two
@@ -244,5 +247,5 @@ and constraints as much as they reflect outcomes. To make sense of such data, an
 a fundamental toolkit: describing how values are distributed, how much they vary, and where
 anomalies lie.
 
-Chapter~*chap:descriptive* introduces that toolkit—the essential language of descriptive
+Chapter 3 introduces that toolkit—the essential language of descriptive
 statistics.

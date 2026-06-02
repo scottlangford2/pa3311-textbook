@@ -13,7 +13,7 @@ permalink: /docs/chapter2/
 > 
 *"The formulation of a problem is often more essential than its solution."*
 
- Albert Einstein(einsteinIdeas)
+ Albert Einstein (Einstein)
 
 
 > 
@@ -32,7 +32,7 @@ underpins all analytical techniques introduced in this book.
 ## Opening Case: San Antonio's Aging Water Mains and the Question Behind the Crisis
 
 
-In 2023, the San Antonio Express-News reported on a pattern that had become difficult to ignore: aging water mains across San Antonio were breaking with increasing frequency, triggering boil-water notices that affected thousands of residents (expressnewsSAWS). Neighborhoods on the city's south and west sides appeared disproportionately affected. City officials acknowledged the problem and pointed to a multi-billion-dollar capital improvement plan, but residents and council members wanted answers now: Was the system getting worse? Were some communities bearing more of the burden than others?
+In 2023, the San Antonio Express-News reported on a pattern that had become difficult to ignore: aging water mains across San Antonio were breaking with increasing frequency, triggering boil-water notices that affected thousands of residents (San Antonio Express-News). Neighborhoods on the city's south and west sides appeared disproportionately affected. City officials acknowledged the problem and pointed to a multi-billion-dollar capital improvement plan, but residents and council members wanted answers now: Was the system getting worse? Were some communities bearing more of the burden than others?
 
 The public debate was framed broadly---"San Antonio has a water infrastructure crisis"---but that framing resisted analytical traction. A crisis of what, exactly? Frequency of breaks? Duration of service disruptions? Cost of emergency repairs? Geographic concentration? Each framing implies a different outcome variable, a different unit of analysis, and a different comparison. A research question about whether break *frequency* is increasing over time requires annual counts by pipe segment or district. A question about *equity* requires mapping breaks against neighborhood demographics. A question about *severity* requires data on how long residents go without safe water after each event.
 
@@ -67,7 +67,7 @@ Time is spent re-running analyses rather than clarifying aims. In some cases, po
 questions can damage trust: stakeholders feel overwhelmed with technical material yet no closer to
 understanding the problem.
 
-Chapter~*chap:intro* emphasized that analytical habits—skepticism, transparency, and
+Chapter 1 emphasized that analytical habits—skepticism, transparency, and
 discipline—provide protection against these errors. This chapter shows how those habits are
 translated into practice through the construction of research questions. It is not an
 introductory formality. It is a practical chapter about how to think clearly before calculating
@@ -87,7 +87,7 @@ assuming that their interest—say, in "service responsiveness" or "budget stres
 obvious. It rarely is.
 
 To see why, consider the City of Austin's 311 open data, which records service requests submitted
-by residents (austin311open). A seemingly straightforward interest in "slow response times"
+by residents (City of Austin open data). A seemingly straightforward interest in "slow response times"
 can mean several different things:
 
 Are we concerned about the slowest individual cases, or about typical performance? Are we comparing departments, neighborhoods, request categories, or time periods? Are we interested in the level of response times, or in changes over time? Are we worried about operational efficiency, equity, or both?
@@ -143,10 +143,10 @@ A workable question emerges:
 
 
 > 
-*Which council districts file the most traffic-related 311 requests per 10\,000 residents?*
+*Which council districts file the most traffic-related 311 requests per 10,000 residents?*
 
 
-> **Returning to the Case:** The San Antonio Water System (SAWS) water infrastructure concern follows the same three-step decomposition. *Outcome:* number of water main breaks (or boil-water notices, or hours without service). *Units:* pipe segments, zip codes, or water service districts. *Pattern:* geographic concentration, trend over time, or comparison across neighborhood income levels. Each choice produces a different---and answerable---research question from the same broad concern.}
+> **Returning to the Case:** The San Antonio Water System (SAWS) water infrastructure concern follows the same three-step decomposition. *Outcome:* number of water main breaks (or boil-water notices, or hours without service). *Units:* pipe segments, zip codes, or water service districts. *Pattern:* geographic concentration, trend over time, or comparison across neighborhood income levels. Each choice produces a different---and answerable---research question from the same broad concern.
 
 **Example 2: City Responsiveness**
 
@@ -192,7 +192,7 @@ This is a legitimate concern but not a research question. An analyst's task is t
 
 **Evaluation.**
 Question 1 defines the outcome (completion time), the units (requests by category), and the pattern (distribution shape and central tendency). It is answerable with existing 311 data.
-Question 2 adds a specific comparison (east vs.\ west) and a test (whether the difference exceeds chance).
+Question 2 adds a specific comparison (east vs. west) and a test (whether the difference exceeds chance).
 Question 3 introduces a predictor variable (renter share) and moves toward relational analysis. Each question is progressively more complex---but all three began with the same vague concern. The analyst's job is to make the choice explicit and justified.
 
 
@@ -352,7 +352,7 @@ of service).
 
 **Concern.** Advocacy organisations raise concerns that some neighborhoods receive slower
 service than others, potentially compounding existing inequalities. This echoes a broader
-literature on neighborhood effects and spatial disadvantage (sampson2012great,chetty2016mto).
+literature on neighborhood effects and spatial disadvantage (Sampson 2012; Chetty et al. 2016).
 
 **Research question.**
 
@@ -384,7 +384,7 @@ outline of the analysis.
 A research question is strongest when paired with a clear understanding of how the underlying data
 record real-world processes. Administrative data are not collected primarily for research. They
 are by-products of systems designed to manage work, allocate staff, or document compliance
-(einav2014datarev). This has three implications.
+(Einav & Levin 2014). This has three implications.
 
 ### Selective Recording
 
@@ -421,7 +421,7 @@ Questions like "Are services good?" or "Is this program effective?" lack operati
 They must be broken down into components: timeliness, coverage, satisfaction, cost, or equity. Vague questions are particularly dangerous in public administration because they invite each stakeholder to project a different meaning onto the same words. A council member who asks "Are services good?" may be thinking about equity; a budget officer hearing the same question may focus on cost-efficiency; and a department head may interpret it as a question about workload management. Until the question is made precise, no amount of data can resolve the disagreement.
 
 
-> **Returning to the Case:** "San Antonio has a water infrastructure crisis" is a textbook example of vagueness. A city council member who asks this cannot be answered with data. But "Has the annual number of water main breaks per 100 miles of pipe increased over the past decade in SAWS service districts?" can be. The difference is not one of ambition but of precision.}
+> **Returning to the Case:** "San Antonio has a water infrastructure crisis" is a textbook example of vagueness. A city council member who asks this cannot be answered with data. But "Has the annual number of water main breaks per 100 miles of pipe increased over the past decade in SAWS service districts?" can be. The difference is not one of ambition but of precision.
 
 ### Overly Narrow Focus
 
@@ -513,9 +513,9 @@ temptation to jump into calculations before the analytical task has been defined
 Examples in this chapter draw on:
 
 
-    - City of Austin 311 open data portal and documentation (austin311open).
-    - Research on administrative data structures and interpretation (einav2014datarev).
-    - Studies of neighborhood effects and spatial inequality (sampson2012great,chetty2016mto).
+    - City of Austin 311 open data portal and documentation (City of Austin open data).
+    - Research on administrative data structures and interpretation (Einav & Levin 2014).
+    - Studies of neighborhood effects and spatial inequality (Sampson 2012; Chetty et al. 2016).
 
 
 ## Transition to Chapter Three
@@ -525,4 +525,4 @@ patterns matter, and how evidence should be interpreted. With these foundations 
 chapter introduces the empirical vocabulary that analysts use to summarize and interpret data: the
 logic and language of descriptive statistics.
 
-Chapter~*chap:descriptive* turns to that toolkit.
+Chapter 3 turns to that toolkit.
