@@ -2,8 +2,22 @@
 """Stage 2: merge Census SAIPE county income+poverty (by year) into the political panel.
 Replaces the single-year ERS income/poverty with proper SAIPE series.
 Reads _raw_county/saipe/*; rewrites TX_County_Political_Panel_2000_2024.{csv,xlsx}."""
-import pandas as pd, glob, warnings; warnings.filterwarnings("ignore")
+import pandas as pd, glob, os, urllib.request, warnings; warnings.filterwarnings("ignore")
 SA="_raw_county/saipe/"
+# --- Auto-download SAIPE source files if missing ---
+_SU="https://www2.census.gov/programs-surveys/saipe/datasets"
+_SAIPE={"est04all.xls":f"{_SU}/2004/2004-state-and-county/est04all.xls",
+        "est08all.xls":f"{_SU}/2008/2008-state-and-county/est08all.xls",
+        "est12all.xls":f"{_SU}/2012/2012-state-and-county/est12all.xls",
+        "est16all.xls":f"{_SU}/2016/2016-state-and-county/est16all.xls",
+        "est20all.xls":f"{_SU}/2020/2020-state-and-county/est20all.xls",
+        "est23all.xls":f"{_SU}/2023/2023-state-and-county/est23all.xls",
+        "est00-tx.dat":f"{_SU}/2000/2000-state-and-county/est00-tx.dat"}
+os.makedirs(SA, exist_ok=True)
+for _fn,_url in _SAIPE.items():
+    if not os.path.exists(SA+_fn):
+        print("  downloading",_fn,"..."); _r=urllib.request.Request(_url,headers={"User-Agent":"Mozilla/5.0"})
+        with urllib.request.urlopen(_r,timeout=300) as _resp, open(SA+_fn,"wb") as _f: _f.write(_resp.read())
 # SAIPE year -> election year
 XLS={2004:"est04all.xls",2008:"est08all.xls",2012:"est12all.xls",2016:"est16all.xls",2020:"est20all.xls",2023:"est23all.xls"}
 elect={2004:2004,2008:2008,2012:2012,2016:2016,2020:2020,2023:2024}

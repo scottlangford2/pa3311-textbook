@@ -33,6 +33,34 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(BASE, "_raw_county")
 RAW2 = os.path.join(BASE, "_raw")
 
+# --- Auto-download raw sources if missing (one-command reproducible from scratch) ---
+import urllib.request
+_C = "https://www2.census.gov/programs-surveys/popest/datasets"
+_SOURCES = {
+    os.path.join(RAW, "medsl_2000_2016.csv"): "https://raw.githubusercontent.com/MEDSL/county-returns/master/countypres_2000-2016.csv",
+    os.path.join(RAW, "tonmcg_2020.csv"): "https://raw.githubusercontent.com/tonmcg/US_County_Level_Election_Results_08-24/master/2020_US_County_Level_Presidential_Results.csv",
+    os.path.join(RAW, "tonmcg_2024.csv"): "https://raw.githubusercontent.com/tonmcg/US_County_Level_Election_Results_08-24/master/2024_US_County_Level_Presidential_Results.csv",
+    os.path.join(RAW, "pep_alldata_2020_2024_tx.csv"): f"{_C}/2020-2024/counties/asrh/cc-est2024-alldata-48.csv",
+    os.path.join(RAW, "pep_alldata_2010_2020_tx.csv"): f"{_C}/2010-2020/counties/asrh/CC-EST2020-ALLDATA-48.csv",
+    os.path.join(RAW, "pep_sexracehisp_2000_2010.csv"): f"{_C}/2000-2010/intercensal/county/co-est00int-sexracehisp.csv",
+    os.path.join(RAW, "pep_agesex_2020_2024_tx.csv"): f"{_C}/2020-2024/counties/asrh/cc-est2024-agesex-48.csv",
+    os.path.join(RAW, "pep_agesex_2010_2020_tx.csv"): f"{_C}/2010-2020/counties/asrh/CC-EST2020-AGESEX-48.csv",
+    os.path.join(RAW, "ers_income_unemp.csv"): "https://www.ers.usda.gov/media/5497/unemployment-and-median-household-income-for-the-united-states-states-and-counties-2000-23.csv",
+    os.path.join(RAW, "ers_education.csv"): "https://www.ers.usda.gov/media/5495/educational-attainment-for-adults-age-25-and-older-for-the-united-states-states-and-counties-1970-2023.csv",
+    os.path.join(RAW, "ers_poverty.csv"): "https://www.ers.usda.gov/media/5496/poverty-estimates-for-the-united-states-states-and-counties-2023.csv",
+    os.path.join(RAW, "gaz.zip"): "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2023_Gazetteer/2023_Gaz_counties_national.zip",
+    os.path.join(RAW2, "cbsa_list1_2023.xlsx"): "https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2023/delineation-files/list1_2023.xlsx",
+}
+def _ensure_raw():
+    os.makedirs(RAW, exist_ok=True); os.makedirs(RAW2, exist_ok=True)
+    for path, url in _SOURCES.items():
+        if not os.path.exists(path):
+            print("  downloading", os.path.basename(path), "...")
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=300) as r, open(path, "wb") as f:
+                f.write(r.read())
+_ensure_raw()
+
 ELECTION_YEARS = [2000, 2004, 2008, 2012, 2016, 2020, 2024]
 
 CSV_OUT = os.path.join(BASE, "TX_County_Political_Panel_2000_2024.csv")
