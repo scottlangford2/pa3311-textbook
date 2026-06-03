@@ -33,6 +33,11 @@ Two related files. **Use the panel as the primary course dataset.**
 | `taxable_sales_per_capita` | taxable_sales / 2022 ref population | $ | 2016+ |
 | `business_outlets` | Avg. active business outlets (quarterly mean) | count | 2016+ |
 | `sales_tax_rate` | Local sales-tax rate | percent | |
+| `has_edc` | 1 if the city operates a Type A and/or Type B economic-development corporation (EDC) sales tax | 0/1 | TX Comptroller EDC reports (see below) |
+| `edc_type` | `A`, `B`, `A&B`, or blank (none) | category | TX Comptroller EDC reports |
+| `edc_first_report_year` | Earliest fiscal year the city appears in EDC report data — **left-censored proxy** for adoption, not a clean date | year | TX Comptroller EDC reports |
+
+**Economic-development sales tax (`has_edc`, `edc_type`, `edc_first_report_year`) — Case A.** Source: Texas Comptroller *EDC Report Data* ("big table," data.texas.gov `d4dd-rd43`, annual EDC reports FY1997–present). 637 of 1,180 panel cities operate an EDC (B = 369, A&B = 190, A = 78). **Use `has_edc`/`edc_type` as a cross-sectional treatment** (EDC vs. non-EDC cities). **Caveat:** EDC reporting began in FY1997, so `edc_first_report_year` is left-censored at 1997 — by 1998 some 384 Texas cities had *already* adopted (TEDC). Most adoption therefore predates this 2013–2024 panel (only ~45 cities first report in 2013+), so the column does **not** support a clean adoption-date difference-in-differences; a credible adoption-date DiD would require an open-records request to the Comptroller for per-jurisdiction tax effective dates. Rebuild with `scripts/add_edc.py`. (4A/Type A authorized 1989; 4B/Type B 1991.)
 
 `metro_status` and `cbsa_type` use the official **OMB / Census CBSA delineation (2023)**: a city is *Metro* if its county belongs to a Metropolitan Statistical Area, *Non-Metro* otherwise (Micropolitan or neither). `cbsa_type` keeps the full three-way distinction.
 
@@ -46,7 +51,7 @@ Two related files. **Use the panel as the primary course dataset.**
 - **Descriptives & graphs:** filter to one year (e.g., 2024) → skewed distributions of `sales_tax_alloc_per_capita`, histograms, mean vs. median, outliers.
 - **z-scores & probability:** standardize per-capita sales tax within a year.
 - **Hypothesis testing / CIs:** mean per-capita sales tax with a confidence interval (one year).
-- **Independent-samples t-test:** per-capita sales tax for **Metro vs. Non-Metro** (one year).
+- **Independent-samples t-test:** per-capita sales tax for **Metro vs. Non-Metro** (one year); or per-capita taxable sales for **EDC vs. non-EDC** cities (`has_edc`) — a Case A treatment comparison (note the skew: EDC median \$24k vs. \$10k, but means not significantly different — a selection/skew lesson).
 - **Paired-samples t-test:** `sales_tax_alloc` **2019 vs. 2023** (or 2019 vs. 2020, COVID) — same cities, two years.
 - **Correlation & simple regression:** `sales_tax_alloc` ~ `taxable_sales` (one year).
 - **Multiple regression + OVB:** `sales_tax_alloc` ~ `business_outlets` (simple) → add `taxable_sales` (watch the coefficient move).
