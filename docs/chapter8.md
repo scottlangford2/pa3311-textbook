@@ -48,9 +48,9 @@ This case sets up the core machinery of regression analysis. The outcome variabl
 **Guiding Questions**
 
 
-    - Which fiscal variables would you include in a regression model to predict a Texas city's credit rating---and why?
-    - If a simple regression of credit rating on debt-to-revenue ratio shows a strong negative relationship, what omitted variables might bias this estimate?
-    - How would you interpret a coefficient that says "each additional percentage point of fund balance ratio is associated with a 0.3-point improvement in credit rating, holding other factors constant"?
+- Which fiscal variables would you include in a regression model to predict a Texas city's credit rating---and why?
+- If a simple regression of credit rating on debt-to-revenue ratio shows a strong negative relationship, what omitted variables might bias this estimate?
+- How would you interpret a coefficient that says "each additional percentage point of fund balance ratio is associated with a 0.3-point improvement in credit rating, holding other factors constant"?
 
 
 ## Why Regression Matters in Public Administration
@@ -58,12 +58,12 @@ This case sets up the core machinery of regression analysis. The outcome variabl
 Public-sector questions often involve relationships among variables:
 
 
-    - Do call volumes predict 311 service delays? (City of Austin open data)
-    - Do staffing levels influence EMS response times? (Texas DSHS EMS data)
-    - Do neighborhood characteristics explain disparities in service delivery?
+- Do call volumes predict 311 service delays? (City of Austin open data)
+- Do staffing levels influence EMS response times? (Texas DSHS EMS data)
+- Do neighborhood characteristics explain disparities in service delivery?
           (Sampson 2012; Chetty et al. 2016)
-    - Do economic indicators forecast revenue collections? (BLS)
-    - Does digital recordkeeping reduce inspection duration?
+- Do economic indicators forecast revenue collections? (BLS)
+- Does digital recordkeeping reduce inspection duration?
 
 
 Regression analysis quantifies these relationships and provides tools for inference, prediction,
@@ -89,16 +89,16 @@ Ordinary least squares (OLS) estimates coefficients that minimize squared differ
 Interpretation:
 
 
-    - $\beta_0$ — expected $Y$ when $X=0$.
-    - $\beta_1$ — expected change in $Y$ for a one-unit change in $X$.
+- $\beta_0$ — expected $Y$ when $X=0$.
+- $\beta_1$ — expected change in $Y$ for a one-unit change in $X$.
 
 
 Examples:
 
 
-    - Each additional 311 call is associated with added delay (City of Austin open data).
-    - Each additional EMS staff member reduces response time (Texas DSHS EMS data).
-    - Higher neighborhood disadvantage predicts longer delays (Sampson 2012).
+- Each additional 311 call is associated with added delay (City of Austin open data).
+- Each additional EMS staff member reduces response time (Texas DSHS EMS data).
+- Higher neighborhood disadvantage predicts longer delays (Sampson 2012).
 
 
 Interpreting regression coefficients requires care.  
@@ -111,10 +111,10 @@ claims (Freedman 2007).
 The error term $\varepsilon_i$ captures:
 
 
-    - randomness in administrative processes (Einav & Levin 2014),
-    - omitted variables (weather, seasonality),
-    - measurement error (GAO; U.S. Census ACS),
-    - institutional variation across neighborhoods (Sampson 2012).
+- randomness in administrative processes (Einav & Levin 2014),
+- omitted variables (weather, seasonality),
+- measurement error (GAO; U.S. Census ACS),
+- institutional variation across neighborhoods (Sampson 2012).
 
 
 Understanding the error structure is key to credible modeling.
@@ -156,11 +156,11 @@ $$
 Examples:
 
 
-    - Controlling for weather and staffing, does call volume still predict 311 delays?
-    - Holding distance constant, does EMS staffing reduce response time?
-    - Controlling for income, does housing tenure predict neighborhood variation 
+- Controlling for weather and staffing, does call volume still predict 311 delays?
+- Holding distance constant, does EMS staffing reduce response time?
+- Controlling for income, does housing tenure predict neighborhood variation 
           in delays? (Sampson 2012)
-    - Controlling for economic indicators, does population growth predict revenue? (BLS)
+- Controlling for economic indicators, does population growth predict revenue? (BLS)
 
 
 This “all else equal” interpretation is powerful—but can mislead if important variables are omitted
@@ -180,9 +180,9 @@ $$
 This occurs when:
 
 
-    - workload and staffing correlate,
-    - neighborhood disadvantage correlates with municipal investment (Sampson 2012),
-    - economic conditions correlate with revenues (BLS).
+- workload and staffing correlate,
+- neighborhood disadvantage correlates with municipal investment (Sampson 2012),
+- economic conditions correlate with revenues (BLS).
 
 
 Angrist and Imbens’s identification framework stresses that interpretation demands attention to such
@@ -392,23 +392,23 @@ When regression models use data from complex survey designs---such as the ACS or
 ## Practice and Application
 
 
-    - Fit a simple regression of 311 delay on call volume.  
+- Fit a simple regression of 311 delay on call volume.  
           Extend to multiple regression with neighborhood disadvantage and staffing 
           (City of Austin open data; Sampson 2012).
 
-    - Model EMS response times using distance, staffing, and call severity.  
+- Model EMS response times using distance, staffing, and call severity.  
           Conduct diagnostic checks (Texas DSHS EMS data; Tukey 1977).
 
-    - Use ACS data to model tract-level income using education, unemployment, and housing 
+- Use ACS data to model tract-level income using education, unemployment, and housing 
           characteristics (U.S. Census ACS).  
           Interpret coefficients in light of margins of error.
 
-    - Evaluate whether digital reforms reduce inspection time after adjusting for workload and 
+- Evaluate whether digital reforms reduce inspection time after adjusting for workload and 
           staff experience (Einav & Levin 2014; GAO).
 
-    - Compare models using adjusted $R^2$ and discuss uncertainty using Manski’s framework
+- Compare models using adjusted $R^2$ and discuss uncertainty using Manski’s framework
           (Manski 2019).
-    - Download the voter turnout dataset from the [Course Datasets page](../datasets). In Excel, use Data Analysis $>$ Regression to regress county-level turnout rate on population size. Record the coefficient, $R^2$, and $p$-value. Then add a second predictor (election type, coded as 1 = general, 0 = primary). Compare the two models: How does the population coefficient change? What does this tell you about OVB?
+- Download the voter turnout dataset from the [Course Datasets page](../datasets). In Excel, use Data Analysis $>$ Regression to regress county-level turnout rate on population size. Record the coefficient, $R^2$, and $p$-value. Then add a second predictor (election type, coded as 1 = general, 0 = primary). Compare the two models: How does the population coefficient change? What does this tell you about OVB?
 
 
 ## Transition to Chapter Nine

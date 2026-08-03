@@ -44,9 +44,9 @@ This case captures the core challenge of statistical inference. The question is 
 **Guiding Questions**
 
 
-    - If a rural Texas district reports a 15% vacancy rate based on only 40 positions, how confident should we be that the true rate is near 15%?
-    - When different districts define "vacancy" differently, what does that mean for the precision of statewide estimates?
-    - How does the standard error of a vacancy rate change between a district with 40 positions and one with 4{,}000---and what are the policy implications?
+- If a rural Texas district reports a 15% vacancy rate based on only 40 positions, how confident should we be that the true rate is near 15%?
+- When different districts define "vacancy" differently, what does that mean for the precision of statewide estimates?
+- How does the standard error of a vacancy rate change between a district with 40 positions and one with 4{,}000---and what are the policy implications?
 
 
 ## Why This Chapter Matters
@@ -222,8 +222,8 @@ Confidence intervals answer the question "What values of the parameter are plaus
 
 Every test begins with two competing statements about the population. The **null hypothesis** ($H_0$) is the default claim of "no effect" or "no difference"—the status quo we will believe unless the data give us strong reason to abandon it. The **alternative hypothesis** ($H_1$) is the claim we entertain only if the evidence is strong enough. For a question about a single mean, these take the form:
 
-    - $H_0: \mu = \mu_0$ (the population mean equals some specified value),
-    - $H_1: \mu \neq \mu_0$ (the population mean differs from that value).
+- $H_0: \mu = \mu_0$ (the population mean equals some specified value),
+- $H_1: \mu \neq \mu_0$ (the population mean differs from that value).
 
 The logic is deliberately conservative: we assume the null is true and ask how surprising our data would be under that assumption. Only genuinely surprising data lead us to reject it.
 
@@ -346,34 +346,34 @@ Anscombe’s famous quartet illustrates why numerical inference alone is insuffi
 ## Practice and Application
 
 
-    - Compute the standard error of mean completion times for three request categories in the
+- Compute the standard error of mean completion times for three request categories in the
           311 dataset. Discuss how reporting processes shape uncertainty (City of Austin open data; Einav & Levin 2014).
 
-    - Construct 95% confidence intervals for mean delays in two neighborhoods and discuss the results in light
+- Construct 95% confidence intervals for mean delays in two neighborhoods and discuss the results in light
           of neighborhood effects research (Sampson 2012; Chetty & Hendren 2016).
 
-    - Using ACS margins of error for median income (U.S. Census ACS), explain how sampling
+- Using ACS margins of error for median income (U.S. Census ACS), explain how sampling
           uncertainty affects resource allocation decisions.
 
-    - Compare two time periods (before/after a program). Compute the SE of the difference and
+- Compare two time periods (before/after a program). Compute the SE of the difference and
           assess whether changes exceed sampling variation (U.S. OMB performance guidance).
 
-    - Write a memo evaluating the credibility of a claim based on small-sample data. Use GAO
+- Write a memo evaluating the credibility of a claim based on small-sample data. Use GAO
           criteria for data reliability (U.S. GAO data-quality guidance) and Manski’s argument against
           unwarranted certainty (Manski 2019).
-    - Download the voter turnout dataset from the [Course Datasets page](../datasets). Select 10 small counties (population under 20,000) and 10 large counties (population over 200,000). For each group, compute the mean turnout rate, standard error, and 95% confidence interval. Compare the widths of the two intervals and write a short note explaining why the small-county interval is wider.
+- Download the voter turnout dataset from the [Course Datasets page](../datasets). Select 10 small counties (population under 20,000) and 10 large counties (population over 200,000). For each group, compute the mean turnout rate, standard error, and 95% confidence interval. Compare the widths of the two intervals and write a short note explaining why the small-county interval is wider.
 
 
 ## Sources for Examples in This Chapter
 
 
-    - Administrative data systems (Einav & Levin 2014).
-    - City of Austin 311 data (City of Austin open data).
-    - Neighbourhood variation (Sampson 2012; Chetty & Hendren 2016).
-    - Federal performance guidance (U.S. OMB performance guidance).
-    - Data quality and reliability guidance (U.S. GAO data-quality guidance).
-    - ACS and BLS methodological documentation (U.S. Census ACS; BLS).
-    - Foundational statistical texts (Tukey 1977; Cleveland 1993; Anscombe 1973;
+- Administrative data systems (Einav & Levin 2014).
+- City of Austin 311 data (City of Austin open data).
+- Neighbourhood variation (Sampson 2012; Chetty & Hendren 2016).
+- Federal performance guidance (U.S. OMB performance guidance).
+- Data quality and reliability guidance (U.S. GAO data-quality guidance).
+- ACS and BLS methodological documentation (U.S. Census ACS; BLS).
+- Foundational statistical texts (Tukey 1977; Cleveland 1993; Anscombe 1973;
           Freedman 2007; Gelman & Hill 2007; Manski 2019;
           Casella & Berger 2002; Ross 2014; McElreath 2020).
 

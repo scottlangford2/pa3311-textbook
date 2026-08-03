@@ -44,9 +44,9 @@ For an analyst, the flood map dispute is a case study in applied probability. Ev
 **Guiding Questions**
 
 
-    - What does it mean to say a neighborhood faces a "1% annual chance" of flooding, and why is that not the same as one flood per century?
-    - How do the assumptions built into FEMA's hydrological models---about rainfall, drainage capacity, and development patterns---shape the probability estimates on flood maps?
-    - If flood risk depends on both location and infrastructure investment, how would you express this relationship using conditional probability?
+- What does it mean to say a neighborhood faces a "1% annual chance" of flooding, and why is that not the same as one flood per century?
+- How do the assumptions built into FEMA's hydrological models---about rainfall, drainage capacity, and development patterns---shape the probability estimates on flood maps?
+- If flood risk depends on both location and infrastructure investment, how would you express this relationship using conditional probability?
 
 
 ## Why This Chapter Matters
@@ -92,9 +92,9 @@ administrators fall in between.
 Three rules govern probability:
 
 
-    - **Non-negativity:** $P(A) \ge 0$
-    - **Normalization:** $P(\Omega) = 1$ for the full set of possible outcomes $\Omega$
-    - **Additivity:** If $A$ and $B$ are mutually exclusive,
+- **Non-negativity:** $P(A) \ge 0$
+- **Normalization:** $P(\Omega) = 1$ for the full set of possible outcomes $\Omega$
+- **Additivity:** If $A$ and $B$ are mutually exclusive,
     
 $$
     P(A \cup B) = P(A) + P(B)
@@ -210,9 +210,9 @@ $$
 Applications:
 
 
-    - time until next emergency call,
-    - time until next inspection failure,
-    - time between utility outages.
+- time until next emergency call,
+- time until next inspection failure,
+- time between utility outages.
 
 
 ### Normal Distribution
@@ -236,9 +236,9 @@ Its central role comes partly from the Central Limit Theorem (discussed below): 
 
 For any normal distribution, the proportion of values falling within a given number of standard deviations of the mean is fixed. This is the **empirical rule**, often summarized as 68/95/99.7:
 
-    - About **68%** of values fall within 1 standard deviation of the mean,
-    - About **95%** fall within 2 standard deviations,
-    - About **99.7%** fall within 3 standard deviations.
+- About **68%** of values fall within 1 standard deviation of the mean,
+- About **95%** fall within 2 standard deviations,
+- About **99.7%** fall within 3 standard deviations.
 
 These benchmarks let an analyst judge quickly whether an observation is typical or unusual. A value more than two standard deviations from the mean lands in the outer 5% of a normal distribution—rare enough to warrant a second look.
 
@@ -260,10 +260,10 @@ The area under the normal curve to the left of a given z-score equals the propor
 
 Excel handles every step of normal-curve work:
 
-    - `STANDARDIZE(x, mean, standard_dev)` converts a raw value into its z-score.
-    - `NORM.S.DIST(z, TRUE)` returns the area to the left of a z-score on the *standard* normal curve (mean 0, SD 1)—that is, the percentile.
-    - `NORM.DIST(x, mean, standard_dev, TRUE)` returns the area to the left of a raw value directly, without first computing a z-score.
-    - `NORM.INV(probability, mean, standard_dev)` runs the calculation in reverse: given a percentile, it returns the value at that point in the distribution.
+- `STANDARDIZE(x, mean, standard_dev)` converts a raw value into its z-score.
+- `NORM.S.DIST(z, TRUE)` returns the area to the left of a z-score on the *standard* normal curve (mean 0, SD 1)—that is, the percentile.
+- `NORM.DIST(x, mean, standard_dev, TRUE)` returns the area to the left of a raw value directly, without first computing a z-score.
+- `NORM.INV(probability, mean, standard_dev)` runs the calculation in reverse: given a percentile, it returns the value at that point in the distribution.
 
 The `TRUE` argument requests the cumulative area (the percentile); `FALSE` would instead return the height of the curve, which is rarely what an analyst wants.
 
@@ -291,16 +291,16 @@ $$
 Events are:
 
 
-    - **Independent** if $P(A \cap B) = P(A)P(B)$,
-    - **Dependent** otherwise.
+- **Independent** if $P(A \cap B) = P(A)P(B)$,
+- **Dependent** otherwise.
 
 
 Dependence is common in public operations:
 
 
-    - Heat waves increase electricity outages and EMS calls simultaneously.
-    - Severe weather increases both flood complaints and traffic accidents.
-    - Staffing shortages increase the chance of delays and backlogs.
+- Heat waves increase electricity outages and EMS calls simultaneously.
+- Severe weather increases both flood complaints and traffic accidents.
+- Staffing shortages increase the chance of delays and backlogs.
 
 
 Such dependencies mirror the structural clustering documented in neighborhood-level research
@@ -320,9 +320,9 @@ $$
 Interpretation in public administration:
 
 
-    - $P(\text{delay} \mid \text{weekend})$
-    - $P(\text{high EMS volume} \mid \text{heat advisory})$
-    - $P(\text{missing data} \mid \text{department})$ (U.S. GAO data-quality guidance)
+- $P(\text{delay} \mid \text{weekend})$
+- $P(\text{high EMS volume} \mid \text{heat advisory})$
+- $P(\text{missing data} \mid \text{department})$ (U.S. GAO data-quality guidance)
 
 
 > **Returning to the Case:** The Dallas flood map case is a natural application of conditional probability. Residents want to know $P(\text{flood} \mid \text{in FEMA zone})$ versus $P(\text{flood} \mid \text{not in FEMA zone})$. But the probability also depends on infrastructure: $P(\text{flood} \mid \text{in zone, new drainage})$ may differ substantially from $P(\text{flood} \mid \text{in zone, aging infrastructure})$. The policy debate over flood maps is, at its core, a debate about which conditioning variables belong in the probability model.
@@ -376,9 +376,9 @@ $$
 Examples:
 
 
-    - Updating outage risk when the weather forecast changes.
-    - Revising projected call volume after early-morning patterns are observed.
-    - Updating likely inspection failures given new information about facility age.
+- Updating outage risk when the weather forecast changes.
+- Revising projected call volume after early-morning patterns are observed.
+- Updating likely inspection failures given new information about facility age.
 
 
 Bayesian reasoning mirrors real-time decision-making in emergency management, where agencies adjust
@@ -411,10 +411,10 @@ $$
 These quantities are not just mathematical abstractions. They apply directly to:
 
 
-    - forecasting call volumes,
-    - budgeting under uncertainty,
-    - assessing workload variability,
-    - designing performance standards (U.S. OMB performance guidance).
+- forecasting call volumes,
+- budgeting under uncertainty,
+- assessing workload variability,
+- designing performance standards (U.S. OMB performance guidance).
 
 
 High-variance neighborhoods often correspond to the structural inequalities documented in urban
@@ -456,9 +456,9 @@ $$
 The CLT justifies why:
 
 
-    - budget forecasts use normal-theory confidence bands,
-    - performance measures use normal approximations,
-    - sampling distributions behave predictably.
+- budget forecasts use normal-theory confidence bands,
+- performance measures use normal approximations,
+- sampling distributions behave predictably.
 
 
 But independence and identical distribution assumptions can fail in neighborhood-level processes
@@ -539,28 +539,28 @@ disproportionately.
 ## Practice and Application
 
 
-    - Using 311 completion time data, estimate $P(\text{Delay} > 7 \text{ days})$ and compare across neighborhoods (Sampson 2012).
+- Using 311 completion time data, estimate $P(\text{Delay} > 7 \text{ days})$ and compare across neighborhoods (Sampson 2012).
 
-    - Compute conditional probabilities such as $P(\text{High Volume} \mid \text{Rain})$ using hourly call data (City of Austin open data).
+- Compute conditional probabilities such as $P(\text{High Volume} \mid \text{Rain})$ using hourly call data (City of Austin open data).
 
-    - Simulate Poisson arrivals for EMS calls and compare simulation outcomes with real administrative data (Texas DSHS EMS data).
+- Simulate Poisson arrivals for EMS calls and compare simulation outcomes with real administrative data (Texas DSHS EMS data).
 
-    - Use Bayes’ Rule to update the probability of a major outage given new weather alerts.
+- Use Bayes’ Rule to update the probability of a major outage given new weather alerts.
 
-    - Write a short memo explaining why LLN and CLT justify (or fail to justify) current departmental performance metrics.
-    - A Texas city experiences an average of 3 water main breaks per month. Using the Poisson distribution, compute (in Excel or by hand) the probability of (a) zero breaks in a given month, (b) exactly 5 breaks, and (c) 6 or more breaks. Show your work. What staffing implications does the answer to (c) have?
-    - Using the flood probability formula from this chapter, compute the probability of at least one major flood ($P = 0.02$ annually) over a 50-year planning horizon. Compare this to the 30-year mortgage calculation in the worked example. Write a one-paragraph memo to a city planner explaining why a "50-year flood" is not as rare as it sounds.
+- Write a short memo explaining why LLN and CLT justify (or fail to justify) current departmental performance metrics.
+- A Texas city experiences an average of 3 water main breaks per month. Using the Poisson distribution, compute (in Excel or by hand) the probability of (a) zero breaks in a given month, (b) exactly 5 breaks, and (c) 6 or more breaks. Show your work. What staffing implications does the answer to (c) have?
+- Using the flood probability formula from this chapter, compute the probability of at least one major flood ($P = 0.02$ annually) over a 50-year planning horizon. Compare this to the 30-year mortgage calculation in the worked example. Write a one-paragraph memo to a city planner explaining why a "50-year flood" is not as rare as it sounds.
 
 
 ## Sources for Examples in This Chapter
 
 
-    - City of Austin 311 open data portal (City of Austin open data).
-    - Administrative data processes (Einav & Levin 2014).
-    - Neighbourhood variation research (Sampson 2012; Chetty & Hendren 2016).
-    - Federal standards and measurement guidance (U.S. OMB performance guidance).
-    - Data reliability and reporting guidance (U.S. GAO data-quality guidance).
-    - ACS and BLS methodological documentation (U.S. Census ACS; BLS).
+- City of Austin 311 open data portal (City of Austin open data).
+- Administrative data processes (Einav & Levin 2014).
+- Neighbourhood variation research (Sampson 2012; Chetty & Hendren 2016).
+- Federal standards and measurement guidance (U.S. OMB performance guidance).
+- Data reliability and reporting guidance (U.S. GAO data-quality guidance).
+- ACS and BLS methodological documentation (U.S. Census ACS; BLS).
 
 
 ## Transition to Chapter Five

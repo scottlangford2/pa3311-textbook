@@ -35,10 +35,10 @@ a rigorous quantitative analysis.
 Public administrators do not ask, “What is the mean?” They ask:
 
 
-    - Is service delivery equitable across neighborhoods?
-    - Does a policy reform improve performance?
-    - How do staffing, workload, and context shape outcomes?
-    - What can data tell us—and what can it not tell us?
+- Is service delivery equitable across neighborhoods?
+- Does a policy reform improve performance?
+- How do staffing, workload, and context shape outcomes?
+- What can data tell us—and what can it not tell us?
 
 
 These questions are at the heart of modern public management and echo the themes developed
@@ -59,9 +59,9 @@ This chapter guides you through the process of integrating these tools into a si
 **Guiding Questions**
 
 
-    - If asked to evaluate whether San Marcos's rapid growth has degraded public service delivery, what research question would you formulate---and which analytical tools would you use?
-    - How would you combine descriptive statistics, inferential tests, and regression to build a comprehensive picture of service delivery strain?
-    - What limitations would you acknowledge, and how would uncertainty affect your policy recommendations?
+- If asked to evaluate whether San Marcos's rapid growth has degraded public service delivery, what research question would you formulate---and which analytical tools would you use?
+- How would you combine descriptive statistics, inferential tests, and regression to build a comprehensive picture of service delivery strain?
+- What limitations would you acknowledge, and how would uncertainty affect your policy recommendations?
 
 
 > 
@@ -77,10 +77,10 @@ A compelling research question is analytical, specific, and grounded in public a
 Good examples:
 
 
-    - Do 311 service delays differ across neighborhoods with different socioeconomic characteristics?
-    - Did EMS response times improve after a staffing reform? (Texas DSHS EMS data)
-    - Do census tract income levels predict emergency call volume? (U.S. Census ACS)
-    - Does digital recordkeeping reduce inspection processing times? (Einav & Levin 2014)
+- Do 311 service delays differ across neighborhoods with different socioeconomic characteristics?
+- Did EMS response times improve after a staffing reform? (Texas DSHS EMS data)
+- Do census tract income levels predict emergency call volume? (U.S. Census ACS)
+- Does digital recordkeeping reduce inspection processing times? (Einav & Levin 2014)
 
 
 Weak questions are overly broad ("Is the city doing well?") or descriptive without inference
@@ -150,9 +150,9 @@ Modeling multiple predictors simultaneously (Chapter 8).
 You must justify your chosen test based on:
 
 
-    - the structure of your data,
-    - the nature of your research question,
-    - the assumptions underlying the statistical method (Casella & Berger 2002; Ross 2014).
+- the structure of your data,
+- the nature of your research question,
+- the assumptions underlying the statistical method (Casella & Berger 2002; Ross 2014).
 
 
 > 
@@ -202,31 +202,31 @@ Your recommendations should be realistic and proportional to the evidence. If yo
 A clear structure:
 
 
-    - **Introduction**  
+- **Introduction**  
           Research question, motivation, short preview.
 
-    - **Background and Theory**  
+- **Background and Theory**  
           Based on organizational or policy context.
 
-    - **Data**  
+- **Data**  
           Source, variables, limitations.
 
-    - **Descriptive Statistics**  
+- **Descriptive Statistics**  
           Tables, graphs, interpretation.
 
-    - **Methods**  
+- **Methods**  
           Tests and models used, with justification.
 
-    - **Results**  
+- **Results**  
           Tables, regression output, graphics, interpretation.
 
-    - **Discussion**  
+- **Discussion**  
           Relevance, policy insights, implications.
 
-    - **Limitations**  
+- **Limitations**  
           Data quality, uncertainty, generalizability.
 
-    - **Conclusion**
+- **Conclusion**
           Final message, possible next steps for administrators.
 
 
@@ -235,19 +235,19 @@ A clear structure:
 The following outline illustrates what a completed analysis might look like, using the San Marcos growth case:
 
 
-    - **Research Question.** Has the average time to process a building permit in San Marcos increased between 2018 and 2023, and does current processing time differ significantly from peer cities?
+- **Research Question.** Has the average time to process a building permit in San Marcos increased between 2018 and 2023, and does current processing time differ significantly from peer cities?
 
-    - **Data.** Building permit records from the City of San Marcos (2018--2023), including submission date, approval date, and permit type. Peer-city data from New Braunfels, Kyle, and Georgetown.
+- **Data.** Building permit records from the City of San Marcos (2018--2023), including submission date, approval date, and permit type. Peer-city data from New Braunfels, Kyle, and Georgetown.
 
-    - **Descriptive Statistics.** Mean and median processing times by year. Histogram showing right-skewed distribution. IQR increasing from 12 days (2018) to 28 days (2023), suggesting growing backlog variability.
+- **Descriptive Statistics.** Mean and median processing times by year. Histogram showing right-skewed distribution. IQR increasing from 12 days (2018) to 28 days (2023), suggesting growing backlog variability.
 
-    - **Inferential Test.** Paired *t*-test comparing same-month processing times in 2018 vs. 2023 ($n = 12$ monthly averages). Result: $\bar{D} = 14.2$ days, $t = 3.81$, $p = 0.003$. The increase is statistically significant.
+- **Inferential Test.** Paired *t*-test comparing same-month processing times in 2018 vs. 2023 ($n = 12$ monthly averages). Result: $\bar{D} = 14.2$ days, $t = 3.81$, $p = 0.003$. The increase is statistically significant.
 
-    - **Regression.** Multiple regression of processing time on applications per staff member, permit type, and month. Key finding: each additional 5 applications per staff member is associated with a 3.2-day increase in processing time ($p = 0.01$), controlling for permit complexity.
+- **Regression.** Multiple regression of processing time on applications per staff member, permit type, and month. Key finding: each additional 5 applications per staff member is associated with a 3.2-day increase in processing time ($p = 0.01$), controlling for permit complexity.
 
-    - **Limitations.** Data do not capture informal pre-submission consultations. Staff turnover is not measured directly. Peer-city data may use different definitions of "processing time."
+- **Limitations.** Data do not capture informal pre-submission consultations. Staff turnover is not measured directly. Peer-city data may use different definitions of "processing time."
 
-    - **Policy Discussion.** The staffing coefficient suggests that adding one full-time planner (reducing the applications-per-staff ratio by approximately 8) could reduce average processing time by roughly 5 days. This is a modest but operationally meaningful improvement for a city where permit delays have become a public concern.
+- **Policy Discussion.** The staffing coefficient suggests that adding one full-time planner (reducing the applications-per-staff ratio by approximately 8) could reduce average processing time by roughly 5 days. This is a modest but operationally meaningful improvement for a city where permit delays have become a public concern.
 
 
 This example is not a template to copy. It is a model of the *reasoning process*: question drives data, data drive method, method drives finding, finding drives recommendation. Every step is transparent, every limitation is acknowledged, and the conclusion is proportional to the evidence.
@@ -271,4 +271,4 @@ Finally, remember that the audience for your work is not your statistics instruc
 ## Practice and Application
 
 
-    - **Mini-project.** Using either the voter turnout, EMS, or weather dataset from the appendices, complete the following in no more than 3 pages: (a) state a research question, (b) describe the data and its limitations, (c) present descriptive statistics with at least one figure, (d) conduct one inferential test or regression, (e) interpret the results, and (f) write a one-paragraph policy recommendation. This exercise mirrors the structure of the Final Project at reduced scale.
+- **Mini-project.** Using either the voter turnout, EMS, or weather dataset from the appendices, complete the following in no more than 3 pages: (a) state a research question, (b) describe the data and its limitations, (c) present descriptive statistics with at least one figure, (d) conduct one inferential test or regression, (e) interpret the results, and (f) write a one-paragraph policy recommendation. This exercise mirrors the structure of the Final Project at reduced scale.

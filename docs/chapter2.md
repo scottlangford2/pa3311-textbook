@@ -42,9 +42,9 @@ This case illustrates a challenge that recurs throughout public administration: 
 **Guiding Questions**
 
 
-    - "San Antonio has a water infrastructure problem" is a concern, not a research question. What outcome, units, and comparison would make this analytically tractable?
-    - How would you operationalize "equity" in the distribution of water main breaks across neighborhoods?
-    - What data would you need to determine whether boil-water notices are concentrated in particular parts of the city---and what limitations might you anticipate?
+- "San Antonio has a water infrastructure problem" is a concern, not a research question. What outcome, units, and comparison would make this analytically tractable?
+- How would you operationalize "equity" in the distribution of water main breaks across neighborhoods?
+- What data would you need to determine whether boil-water notices are concentrated in particular parts of the city---and what limitations might you anticipate?
 
 
 ## Why This Chapter Matters
@@ -129,9 +129,9 @@ priorities. But they are too broad to be analyzed directly.
 The move from a topic to a question involves three steps:
 
 
-    - Identify the *outcome* of interest.
-    - Identify the *units* and *groups* to be compared.
-    - Decide on the *kind of pattern* to be examined (level, difference, change, or
+- Identify the *outcome* of interest.
+- Identify the *units* and *groups* to be compared.
+- Decide on the *kind of pattern* to be examined (level, difference, change, or
     association).
 
 
@@ -185,9 +185,9 @@ Imagine a city manager receives this directive from the mayor: *"Our responsiven
 This is a legitimate concern but not a research question. An analyst's task is to decompose it into something answerable. Here are three possible research questions, each addressing a different dimension of "responsiveness":
 
 
-    - **Descriptive:** What is the distribution of 311 request completion times across major service categories, and which categories exhibit the longest median delays?
-    - **Comparative:** Do median completion times for infrastructure requests differ significantly between the city's east-side and west-side council districts?
-    - **Relational:** Is there an association between the share of renter-occupied housing in a neighborhood and the average time to complete a 311 request?
+- **Descriptive:** What is the distribution of 311 request completion times across major service categories, and which categories exhibit the longest median delays?
+- **Comparative:** Do median completion times for infrastructure requests differ significantly between the city's east-side and west-side council districts?
+- **Relational:** Is there an association between the share of renter-occupied housing in a neighborhood and the average time to complete a 311 request?
 
 
 **Evaluation.**
@@ -277,13 +277,13 @@ Variables describe attributes that differ across units.
 In the 311 dataset, typical variables include:
 
 
-    - `DaysToComplete` — a continuous variable measuring the difference between closure
+- `DaysToComplete` — a continuous variable measuring the difference between closure
     and creation dates;
-    - `Category` — a categorical variable (e.g., "Animal," "Infrastructure,"
+- `Category` — a categorical variable (e.g., "Animal," "Infrastructure,"
     "Traffic");
-    - `OnTime` — a binary variable indicating whether a request was completed within a
+- `OnTime` — a binary variable indicating whether a request was completed within a
     specified threshold;
-    - `Zipcode` or `CouncilDistrict` — locational identifiers.
+- `Zipcode` or `CouncilDistrict` — locational identifiers.
 
 
 Variables must be clearly defined so that every analyst understands what is being measured, consistently coded so that categories are mutually exclusive and exhaustive, and appropriate to the research question so that the level of detail is sufficient to answer the question at hand. When any of these conditions is violated, the resulting analysis may be technically correct but substantively misleading.
@@ -315,9 +315,9 @@ manager wants to know whether this is a system-wide issue or confined to particu
 
 **Unit, variables, comparison.**
 
-    - **Unit:** Individual service request.
-    - **Variables:** `DaysToComplete`, `Category`, `Department`.
-    - **Comparison:** Distributions (medians, quartiles, tails) across groups.
+- **Unit:** Individual service request.
+- **Variables:** `DaysToComplete`, `Category`, `Department`.
+- **Comparison:** Distributions (medians, quartiles, tails) across groups.
 
 
 The analysis might reveal, for instance, that animal-related requests are typically resolved
@@ -338,9 +338,9 @@ not reflected in staffing schedules.
 
 **Unit, variables, comparison.**
 
-    - **Unit:** Month-by-category combination.
-    - **Variables:** Count of requests per month per category.
-    - **Comparison:** Variation over time within and across categories.
+- **Unit:** Month-by-category combination.
+- **Variables:** Count of requests per month per category.
+- **Comparison:** Variation over time within and across categories.
 
 
 Here, a simple line chart built from monthly counts may reveal that tree-related complaints spike
@@ -362,10 +362,10 @@ literature on neighborhood effects and spatial disadvantage (Sampson 2012; Chett
 
 **Unit, variables, comparison.**
 
-    - **Unit:** Neighbourhood (or census tract).
-    - **Variables:** Median completion time for infrastructure requests; proportion of
+- **Unit:** Neighbourhood (or census tract).
+- **Variables:** Median completion time for infrastructure requests; proportion of
     renter-occupied housing.
-    - **Comparison:** Relationship between neighborhood rental share and median completion
+- **Comparison:** Relationship between neighborhood rental share and median completion
     time, possibly expressed in descriptive plots or correlation.
 
 
@@ -463,45 +463,45 @@ The following exercises are designed to make question formulation a practical sk
 abstract ideal.
 
 
-    - **From topic to question.**  
+- **From topic to question.**  
     For each topic below, write two research questions:
     
-        - a descriptive question, and
-        - a comparative question.
+    - a descriptive question, and
+    - a comparative question.
     
     Topics:
     
-        - emergency medical response,
-        - solid waste complaints,
-        - public park maintenance.
+    - emergency medical response,
+    - solid waste complaints,
+    - public park maintenance.
     
     For each question, write one sentence justifying why it is relevant for a decision-maker.
 
-    - **Decomposing a question.**  
+- **Decomposing a question.**  
     Take one of your questions from (1). Identify explicitly:
     
-        - the unit of analysis,
-        - the key variables,
-        - and the comparison to be made.
+    - the unit of analysis,
+    - the key variables,
+    - and the comparison to be made.
     
     Rewrite the question if these elements are not obvious.
 
-    - **Checking answerability.**  
+- **Checking answerability.**  
     Using any dataset assigned in this course (such as the 311 requests sample), assess whether
     your chosen question can be answered with the variables available. If not, revise the question
     or state clearly what data would be needed.
 
-    - **Rewriting for clarity.**  
+- **Rewriting for clarity.**  
     Write down a vague question you have encountered in a work, internship, or news setting (for
     example, about "waste," "fraud," or "fairness"). Rewrite it into at least two measurable
     research questions that capture different aspects of the concern.
 
-    - **Briefing note.**
+- **Briefing note.**
     Draft a two-sentence briefing for a department director explaining how investing an extra
     hour in sharpening a research question can save days of unnecessary analysis and reduce the
     risk of misleading conclusions.
-    - Using the SAWS water infrastructure case from this chapter, write three research questions at increasing levels of specificity: (a) a broad descriptive question, (b) a comparative question contrasting two neighborhoods, and (c) a relational question involving a predictor variable. For each, identify the outcome, units, and comparison.
-    - A council member says: "Our parks are in terrible shape." Decompose this into two alternative research questions that would lead to different analytical approaches. Explain why the choice of question matters for the type of data collected and the method used.
+- Using the SAWS water infrastructure case from this chapter, write three research questions at increasing levels of specificity: (a) a broad descriptive question, (b) a comparative question contrasting two neighborhoods, and (c) a relational question involving a predictor variable. For each, identify the outcome, units, and comparison.
+- A council member says: "Our parks are in terrible shape." Decompose this into two alternative research questions that would lead to different analytical approaches. Explain why the choice of question matters for the type of data collected and the method used.
 
 
 These exercises are not about clever phrasing. They are about developing a habit: resisting the
@@ -513,9 +513,9 @@ temptation to jump into calculations before the analytical task has been defined
 Examples in this chapter draw on:
 
 
-    - City of Austin 311 open data portal and documentation (City of Austin open data).
-    - Research on administrative data structures and interpretation (Einav & Levin 2014).
-    - Studies of neighborhood effects and spatial inequality (Sampson 2012; Chetty et al. 2016).
+- City of Austin 311 open data portal and documentation (City of Austin open data).
+- Research on administrative data structures and interpretation (Einav & Levin 2014).
+- Studies of neighborhood effects and spatial inequality (Sampson 2012; Chetty et al. 2016).
 
 
 ## Transition to Chapter Three

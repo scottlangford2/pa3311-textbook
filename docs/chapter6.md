@@ -47,9 +47,9 @@ This is precisely the question an independent *t*-test is designed to answer. Gi
 **Guiding Questions**
 
 
-    - If El Paso branches average 42 hours/week and peer-city branches average 48 hours/week, is this difference statistically meaningful---or could it reflect normal city-to-city variation?
-    - What assumptions must hold for an independent *t*-test to validly compare these two groups?
-    - Even if the difference is statistically significant, how would you assess whether it is practically significant for policy decisions?
+- If El Paso branches average 42 hours/week and peer-city branches average 48 hours/week, is this difference statistically meaningful---or could it reflect normal city-to-city variation?
+- What assumptions must hold for an independent *t*-test to validly compare these two groups?
+- Even if the difference is statistically significant, how would you assess whether it is practically significant for policy decisions?
 
 
 ## Why This Chapter Matters
@@ -57,11 +57,11 @@ This is precisely the question an independent *t*-test is designed to answer. Gi
 Group comparisons are ubiquitous in public administration:
 
 
-    - Do two neighborhoods experience different average 311 completion times? (City of Austin open data)
-    - Are EMS response times slower in rural than urban districts? (Texas DSHS EMS data)
-    - Do renter-majority neighborhoods face longer delays than owner-majority ones?
-    - Did a staffing reform reduce average processing time compared to the previous year?
-    - Do ACS estimates of income differ across two census tracts? (U.S. Census ACS)
+- Do two neighborhoods experience different average 311 completion times? (City of Austin open data)
+- Are EMS response times slower in rural than urban districts? (Texas DSHS EMS data)
+- Do renter-majority neighborhoods face longer delays than owner-majority ones?
+- Did a staffing reform reduce average processing time compared to the previous year?
+- Do ACS estimates of income differ across two census tracts? (U.S. Census ACS)
 
 
 But descriptive differences alone cannot answer these questions. Sampling variation (Chapter 5)
@@ -123,10 +123,10 @@ null hypothesis. If the observed difference exceeds what the null predicts, we r
 Administrative examples include:
 
 
-    - comparing completion times across neighborhoods,
-    - assessing whether a new operational unit is faster than the old,
-    - comparing service performance across demographic groups (with care for representativeness),
-    - evaluating the impact of a pilot program on processing delays.
+- comparing completion times across neighborhoods,
+- assessing whether a new operational unit is faster than the old,
+- comparing service performance across demographic groups (with care for representativeness),
+- evaluating the impact of a pilot program on processing delays.
 
 
 Freedman emphasizes that such tests must be grounded in realistic assumptions about how the data
@@ -333,22 +333,22 @@ Interpretation requires examining effect size, uncertainty, and practical releva
 ## Practice and Application
 
 
-    - Compare 311 completion times across two neighborhoods using Welch’s *t*-test.
+- Compare 311 completion times across two neighborhoods using Welch’s *t*-test.
           Use graphical diagnostics to examine skewness (City of Austin open data).
 
-    - Evaluate whether EMS response times differ between two districts.
+- Evaluate whether EMS response times differ between two districts.
           Assess both statistical and operational significance (Texas DSHS EMS data).
 
-    - Using ACS median income estimates for two census tracts, compute the independent
+- Using ACS median income estimates for two census tracts, compute the independent
           *t*-test while incorporating margins of error (U.S. Census ACS).
 
-    - Compare processing times before and after a staffing reform (independent samples).
+- Compare processing times before and after a staffing reform (independent samples).
           Interpret results using the conceptual framework of sampling variance
           (Casella & Berger 2002; Freedman 2007).
 
-    - Evaluate the reliability of a published group comparison using GAO criteria for
+- Evaluate the reliability of a published group comparison using GAO criteria for
           data integrity, and critique claims of certainty about small differences.
-    - Using the EMS response time dataset from the [Course Datasets page](../datasets), separate incidents into rural and urban groups. In Excel, use the Data Analysis ToolPak to run an independent *t*-test (two-sample assuming unequal variances). Report the $t$-statistic, $p$-value, and compute Cohen’s $d$ by hand. Write a three-sentence interpretation: Is the difference statistically significant? Is it practically meaningful? What would you recommend to a county administrator?
+- Using the EMS response time dataset from the [Course Datasets page](../datasets), separate incidents into rural and urban groups. In Excel, use the Data Analysis ToolPak to run an independent *t*-test (two-sample assuming unequal variances). Report the $t$-statistic, $p$-value, and compute Cohen’s $d$ by hand. Write a three-sentence interpretation: Is the difference statistically significant? Is it practically meaningful? What would you recommend to a county administrator?
 
 
 ## Transition to Chapter Seven

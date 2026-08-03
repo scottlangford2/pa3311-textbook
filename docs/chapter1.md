@@ -41,9 +41,9 @@ For an analyst in public administration, this case is not primarily about weathe
 **Guiding Questions**
 
 
-    - When two agencies report different numbers for the same event (e.g., storm-related deaths), what analytical habits help an analyst evaluate which figure is more credible?
-    - How does the way data are collected---by hospitals, by ERCOT, by county medical examiners---shape the statistics that appear in news reports?
-    - What does it mean to "read data critically" when the data themselves are produced by institutions under political pressure?
+- When two agencies report different numbers for the same event (e.g., storm-related deaths), what analytical habits help an analyst evaluate which figure is more credible?
+- How does the way data are collected---by hospitals, by ERCOT, by county medical examiners---shape the statistics that appear in news reports?
+- What does it mean to "read data critically" when the data themselves are produced by institutions under political pressure?
 
 
 ## Why This Chapter Matters
@@ -203,30 +203,30 @@ Three anchor examples appear throughout this textbook to illustrate analytical c
 ## Practice and Application
 
 
-    - Identify a public-sector dataset (state, local, or federal). In one paragraph, describe three ways its data-generating process could influence interpretation. Be explicit about reporting rules, incentives, or constraints.
-    - Obtain a simple distribution of EMS response times for two Texas counties (or use a synthetic example provided in class). Compare mean and median for each county. Write a short note explaining what the comparison does—and does not—tell you.
-    - Find a figure or table in a recent government report. Rewrite the caption so that it makes the analytical claim more precise and acknowledges at least one limitation.
-    - In Excel, build a histogram using any administrative dataset discussed in class (EMS, ACFR, or another source). Describe what the shape of the distribution reveals about typical cases and outliers.
-    - Write a two-sentence briefing for a city manager summarizing why transparency in assumptions and methods matters for public analysis.
-    - Two news outlets report different numbers of power outages during a recent Texas storm: one says 2.1 million households, the other says 4.5 million. Using the analytical habits from this chapter, list three specific reasons the numbers might differ (consider definitions, data sources, and timing). Write a two-sentence note explaining which figure you would cite in a policy brief and why.
+- Identify a public-sector dataset (state, local, or federal). In one paragraph, describe three ways its data-generating process could influence interpretation. Be explicit about reporting rules, incentives, or constraints.
+- Obtain a simple distribution of EMS response times for two Texas counties (or use a synthetic example provided in class). Compare mean and median for each county. Write a short note explaining what the comparison does—and does not—tell you.
+- Find a figure or table in a recent government report. Rewrite the caption so that it makes the analytical claim more precise and acknowledges at least one limitation.
+- In Excel, build a histogram using any administrative dataset discussed in class (EMS, ACFR, or another source). Describe what the shape of the distribution reveals about typical cases and outliers.
+- Write a two-sentence briefing for a city manager summarizing why transparency in assumptions and methods matters for public analysis.
+- Two news outlets report different numbers of power outages during a recent Texas storm: one says 2.1 million households, the other says 4.5 million. Using the analytical habits from this chapter, list three specific reasons the numbers might differ (consider definitions, data sources, and timing). Write a two-sentence note explaining which figure you would cite in a policy brief and why.
 
 
 ## Key Terms
 
-    - [Analytical Habits] The disciplined ways analysts frame questions, interrogate data, and justify conclusions.
-    - [Data-Generating Process] The administrative and operational forces that shape how data come into existence.
-    - [Distribution] The shape and spread of values in a dataset, essential for identifying variation and outliers.
-    - [Measurement Error] The difference between the recorded value and the underlying reality, often produced by reporting rules.
-    - [Transparency] Clear communication of assumptions, methods, and limitations to support credible decision-making.
+- [Analytical Habits] The disciplined ways analysts frame questions, interrogate data, and justify conclusions.
+- [Data-Generating Process] The administrative and operational forces that shape how data come into existence.
+- [Distribution] The shape and spread of values in a dataset, essential for identifying variation and outliers.
+- [Measurement Error] The difference between the recorded value and the underlying reality, often produced by reporting rules.
+- [Transparency] Clear communication of assumptions, methods, and limitations to support credible decision-making.
 
 
 ## Key Takeaways
 
-    - Strong analysis begins with precise questions and an understanding of how data are generated.
-    - Averages alone rarely reveal the full story—distributions and context matter.
-    - Administrative datasets reflect operational constraints, reporting rules, and structural inequalities.
-    - Transparency, skepticism, and disciplined reasoning prevent common analytical errors.
-    - The recurring examples used throughout this textbook—voter turnout, EMS response times, and Texas weather—illustrate how analytical tools apply across political, administrative, and general contexts.
+- Strong analysis begins with precise questions and an understanding of how data are generated.
+- Averages alone rarely reveal the full story—distributions and context matter.
+- Administrative datasets reflect operational constraints, reporting rules, and structural inequalities.
+- Transparency, skepticism, and disciplined reasoning prevent common analytical errors.
+- The recurring examples used throughout this textbook—voter turnout, EMS response times, and Texas weather—illustrate how analytical tools apply across political, administrative, and general contexts.
 
 
 ## Sources for Examples in This Chapter

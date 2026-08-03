@@ -47,9 +47,9 @@ This case presents a textbook paired design: the same units (census tracts) meas
 **Guiding Questions**
 
 
-    - If the same 50 census tracts are counted before and after Proposition B, why is a paired *t*-test more appropriate than an independent *t*-test?
-    - Suppose 35 of 50 tracts show lower counts after the ban. Does that necessarily mean the ban reduced homelessness---or could other explanations account for the change?
-    - How does measurement error in point-in-time counts affect the reliability of the paired comparison?
+- If the same 50 census tracts are counted before and after Proposition B, why is a paired *t*-test more appropriate than an independent *t*-test?
+- Suppose 35 of 50 tracts show lower counts after the ban. Does that necessarily mean the ban reduced homelessness---or could other explanations account for the change?
+- How does measurement error in point-in-time counts affect the reliability of the paired comparison?
 
 
 ## Why This Chapter Matters
@@ -233,10 +233,10 @@ Cohen’s *d* for paired designs.
 Interpretation depends on:
 
 
-    - operational thresholds (e.g., minutes of EMS response time (Texas DSHS EMS data)),
-    - measurement error (ACS margins of error (U.S. Census ACS)),
-    - underlying variability in baseline service levels,
-    - neighborhood context.
+- operational thresholds (e.g., minutes of EMS response time (Texas DSHS EMS data)),
+- measurement error (ACS margins of error (U.S. Census ACS)),
+- underlying variability in baseline service levels,
+- neighborhood context.
 
 
 Visualization principles emphasize showing effect sizes graphically to facilitate
@@ -279,11 +279,11 @@ Following Gelman and Hill’s advice on hierarchical and longitudinal data (Gelm
 paired-data diagnostics should examine:
 
 
-    - histograms of differences,
-    - symmetric vs. skewed difference distributions,
-    - outliers (Anscombe’s warning about summary statistics),
-    - missingness patterns across time,
-    - department- or neighborhood-level clustering.
+- histograms of differences,
+- symmetric vs. skewed difference distributions,
+- outliers (Anscombe’s warning about summary statistics),
+- missingness patterns across time,
+- department- or neighborhood-level clustering.
 
 
 Freedman cautions that statistical models must align with institutional realities
@@ -323,23 +323,23 @@ Differences may reflect broader inequality patterns rather than interventions.
 ## Practice and Application
 
 
-    - Using 311 request data, compute paired differences for completion times before and after a
+- Using 311 request data, compute paired differences for completion times before and after a
           workflow reform. Interpret change in the context of administrative process variation
           (City of Austin open data).
 
-    - Evaluate EMS response times across two periods using a paired *t*-test.
+- Evaluate EMS response times across two periods using a paired *t*-test.
           Graph the distribution of differences in the spirit of Tukey’s exploratory data analysis.
 
-    - Using ACS median income estimates from two five-year cycles for a tract, compute paired
+- Using ACS median income estimates from two five-year cycles for a tract, compute paired
           differences and incorporate margins of error into interpretation (U.S. Census ACS).
 
-    - For inspection durations, compare paper vs. digital processing for the same inspectors.
+- For inspection durations, compare paper vs. digital processing for the same inspectors.
           Assess effect size and robustness using graphical diagnostics.
 
-    - Critically evaluate a paired comparison published by a public agency using GAO data-quality
+- Critically evaluate a paired comparison published by a public agency using GAO data-quality
           criteria and Freedman’s cautions about model assumptions
           (Freedman 2007).
-    - Using the EMS response time dataset, identify stations that appear in both 2022 and 2023 data. Compute the paired difference in average response time for each station. In Excel, use the Data Analysis ToolPak to run a paired *t*-test. Report results and discuss whether any observed improvement (or decline) could reflect changes in measurement rather than true operational change.
+- Using the EMS response time dataset, identify stations that appear in both 2022 and 2023 data. Compute the paired difference in average response time for each station. In Excel, use the Data Analysis ToolPak to run a paired *t*-test. Report results and discuss whether any observed improvement (or decline) could reflect changes in measurement rather than true operational change.
 
 
 ## Transition to Chapter Eight

@@ -44,9 +44,9 @@ This case illustrates a foundational principle of descriptive statistics: a summ
 **Guiding Questions**
 
 
-    - If Houston reports an average 911 call abandonment rate of 12%
-    - What graphical tools would reveal whether the abandonment problem is concentrated at specific times or spread evenly across the week?
-    - How might the distribution of hold times differ from the distribution of abandonment rates, and why does the distinction matter for staffing decisions?
+- If Houston reports an average 911 call abandonment rate of 12%
+- What graphical tools would reveal whether the abandonment problem is concentrated at specific times or spread evenly across the week?
+- How might the distribution of hold times differ from the distribution of abandonment rates, and why does the distinction matter for staffing decisions?
 
 
 ## Why This Chapter Matters
@@ -80,10 +80,10 @@ City of Austin’s 311 dataset contains timestamps, categories, and departmental
 medians, percentiles, and graphs—they begin to reveal:
 
 
-    - typical experiences,
-    - sources of delay,
-    - seasonal trends,
-    - and inequities across neighborhoods.
+- typical experiences,
+- sources of delay,
+- seasonal trends,
+- and inequities across neighborhoods.
 
 
 These descriptive structures form the empirical baseline for understanding how services operate.
@@ -254,9 +254,9 @@ $$s_B^2=\frac{(6-12)^2+(9-12)^2+\cdots+(18-12)^2}{9}=\frac{102}{9}=11.3\quad\Rig
 County A's standard deviation is nearly three times larger---driven almost entirely by the 36-minute outlier.
 
 **IQR.**
-For County A: $Q_1 = 8, \; Q_3 = 11$, so $IQR}_A = 3$ minutes.
+For County A: $Q_1 = 8, \; Q_3 = 11$, so $\text{IQR}_A = 3$ minutes.
 
-For County B: $Q_1 = 10, \; Q_3 = 14$, so $IQR}_B = 4$ minutes.
+For County B: $Q_1 = 10, \; Q_3 = 14$, so $\text{IQR}_B = 4$ minutes.
 
 The IQR tells a different story than the standard deviation. County B has a wider middle range (4 vs. 3 minutes), but County A has far more extreme variation. The IQR is robust to outliers; the standard deviation is not. In Excel, use `=STDEV.S()` for standard deviation and `=QUARTILE.INC()` for quartiles.
 
@@ -281,9 +281,9 @@ urban inequality (Sampson 2012).
 Rather than removing outliers reflexively, analysts should interpret them in context:
 
 
-    - Are they due to missing data?
-    - Do they reflect unusual events?
-    - Are they concentrated in particular neighborhoods?
+- Are they due to missing data?
+- Do they reflect unusual events?
+- Are they concentrated in particular neighborhoods?
 
 
 This last question directly connects descriptive statistics to broader structural inequities, as
@@ -381,30 +381,30 @@ Public-sector data rarely follow a normal distribution. EMS response times, 311 
 ## Practice and Application
 
 
-    - Compute the mean, median, IQR, and standard deviation for completion times in the 311 dataset. 
+- Compute the mean, median, IQR, and standard deviation for completion times in the 311 dataset. 
     Discuss why the median may more accurately capture typical experience in skewed service systems (City of Austin open data).
     
-    - Create a histogram and describe its shape. 
+- Create a histogram and describe its shape. 
     Relate it to structural features of administrative data-generating processes (Einav & Levin 2014).
     
-    - Identify neighborhood-level differences in percentiles for response times. 
+- Identify neighborhood-level differences in percentiles for response times. 
     Connect these patterns to broader insights about spatial inequality (Sampson 2012).
     
-    - Compare boxplots across multiple request categories. 
+- Compare boxplots across multiple request categories. 
     Explain how differences reflect institutional processes or resident behaviors.
     
-    - Write a short memo interpreting outliers in one request category.
+- Write a short memo interpreting outliers in one request category.
     Discuss whether these outliers reflect operational failures, rare events, or structural issues highlighted in neighborhood research (Chetty et al. 2016).
-    - Using the EMS response time data provided in this chapter's worked example (Table for Counties A and B), open Excel and verify the mean, median, and standard deviation calculations. Then create a histogram for each county using the Chart tool. In two sentences, explain what the histogram reveals that the mean alone does not.
-    - Download the voter turnout dataset from the [Course Datasets page](../datasets). In Excel, compute the mean, median, and IQR of turnout rates across all counties for a single election year. Create a boxplot. Identify any outlier counties and speculate (in one paragraph) about what might explain their unusual turnout rates.
+- Using the EMS response time data provided in this chapter's worked example (Table for Counties A and B), open Excel and verify the mean, median, and standard deviation calculations. Then create a histogram for each county using the Chart tool. In two sentences, explain what the histogram reveals that the mean alone does not.
+- Download the voter turnout dataset from the [Course Datasets page](../datasets). In Excel, compute the mean, median, and IQR of turnout rates across all counties for a single election year. Create a boxplot. Identify any outlier counties and speculate (in one paragraph) about what might explain their unusual turnout rates.
 
 
 ## Sources for Examples in This Chapter
 
 
-    - City of Austin 311 open data portal (City of Austin open data).
-    - Research on administrative data interpretation (Einav & Levin 2014).
-    - Studies on neighborhood variation and spatial inequality (Sampson 2012; Chetty et al. 2016).
+- City of Austin 311 open data portal (City of Austin open data).
+- Research on administrative data interpretation (Einav & Levin 2014).
+- Studies on neighborhood variation and spatial inequality (Sampson 2012; Chetty et al. 2016).
 
 
 ## Transition to Chapter Four
