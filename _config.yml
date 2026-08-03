@@ -1,8 +1,6 @@
 title: "Analytical Techniques for Public Administration"
 description: "PA 3311 textbook — Texas State University"
 author: "Dr. W. Scott Langford"
-url: "https://pa3311.scottlangford.com"
-baseurl: ""
 theme: minima
 plugins:
   - jekyll-seo-tag
