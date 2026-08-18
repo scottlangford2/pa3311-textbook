@@ -10,6 +10,8 @@ title: Home
 
 This is the online companion to the PA 3311 textbook.
 
+➡️ **[Syllabus & lecture slides](docs/course)**
+
 ## Chapters
 
 1. [Introduction to Analytical Foundations](docs/chapter1)
